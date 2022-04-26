@@ -1,0 +1,223 @@
+.page-content {
+    padding: 0;
+}
+.site-title, .site-title:visited, .site-title:active {
+    color: white;
+}
+#bgCanvas {
+    position: absolute;
+    z-index: -1;
+    height: 30px;
+    width: 100%;
+}
+.site-header {
+    border: 0;
+    min-height: 30px;
+}
+.site-header .wrapper {
+    margin: 0;
+    display: flex;
+    padding: 0;
+    min-width: 100%;
+    .before-title, .after-title, .after-nav {
+        background: url('/assets/img/pattern.svg');
+        background-size: auto 30px;
+        min-height: 100%;
+    }
+    .before-title {
+        width: 26px;
+    }
+    .after-title {
+        flex-grow: 1
+    }
+    .title {
+        padding: 0 20px;
+        box-sizing: border-box;
+        border-bottom: 3px solid #000;
+        height: 30px;
+    }
+}
+#map-toggle, .map-toggle {
+    display: none;
+}
+@media only screen and (max-width: 600px) {
+    .map-toggle {
+        display: block;
+        border-radius: 50%;
+        background: #00b0ff url("./img/map.svg") no-repeat center center;
+        height: 70px;
+        width: 70px;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px, rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
+        z-index:2;
+    }
+    .map-layout .text-section {
+        width: 100%;
+        background-color: white;
+    }
+    .map-layout .map-wrap {
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+    }
+    #map-toggle:checked ~ .map-layout .map-wrap {
+        display: block;
+        z-index: 1;
+    }
+    #map-toggle:checked + .map-toggle {
+        background: #00b0ff url("./img/list.svg") no-repeat center center;
+    }
+    .after-nav {
+        width: 20px;
+        display: none;
+    }
+    .site-nav {
+        display: none; //will change eventually
+        position: relative;
+        top: 0;
+        right: 0;
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        border-bottom: 3px solid #000;
+
+        label[for="nav-trigger"] {
+            width: 30px;
+            height: 20px;
+        }
+
+        .menu-icon {
+            width: 30px;
+            height: 20px;
+            padding-top: 6px;
+        }
+    }
+}
+.site-title {
+    font-size: 18px;
+    line-height: 30px;
+}
+.page-content .wrapper {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+}
+.map-layout {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.map-wrap {
+    height: calc(100vh - 30px);
+    width: calc(100vw - 400px);
+}
+#map {
+    width: 100%;
+    height: 100%;   
+}
+.text-section {
+    width: 400px;
+    height: calc(100vh - 70px);
+    padding: 20px;
+    overflow: scroll;
+
+}
+.polylabel {
+    text-shadow:
+     -1px -1px 0 #FFF,  
+      1px -1px 0 #FFF,
+      -1px 1px 0 #FFF,
+       1px 1px 0 #FFF;
+}
+.marker-img {
+    margin-bottom: 5px;
+}
+.map-anchor div > img {
+    position: absolute;
+}
+h3 {
+    margin-bottom: 0;
+}
+
+.marker-item {
+    margin-bottom: 20px;
+}
+
+#print-button {
+    display: inline-block;
+    position: relative;
+    background: #00b0ff;
+    background-size: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    color: white;
+    padding: 8px;
+    cursor: pointer;
+    img {
+        filter: invert(1);
+        width: 24px;
+        margin-right: 8px;
+    }
+}
+
+body.print {
+    display: block;
+    h1 {
+        margin-block-start: 0;
+    }
+    header {
+        display: none;
+    }
+    .map-wrap {
+        display: none;
+    }
+    .map-layout {
+        display: block;
+    }
+    #print-button {
+        display: none;
+    }
+    .text-section {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        column-count: 3;
+        column-fill: auto;
+        position: relative;
+        overflow: auto;
+        box-decoration-break: clone;
+        overflow-x:hidden;
+    }
+    .page-section {
+        display: block;
+        position: relative;
+        page-break-before: always;
+        break-before: always;
+        page-break-inside: avoid;
+        page-break-after: avoid;
+    }
+    .page-section * {
+        overflow: hidden;
+    }
+    .overview-section {
+        column-span: all;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+    }
+    .map-anchor {
+        display: block;
+        break-before: always;
+        page-break-before: always;
+        page-break-inside: avoid;
+        page-break-after: avoid;
+        position: relative;
+        width: 8in;
+        height: 10in;
+        column-span: all;
+    }
+}

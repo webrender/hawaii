@@ -1,0 +1,210 @@
+---
+layout: default
+---
+<input id="map-toggle" type="checkbox" />
+<label for="map-toggle" class="map-toggle"></label>
+<div class="map-layout">
+    <div class="text-section">
+        <div class="overview-section">
+            <div>{{ page.content | markdownify}}</div>
+            <a id="print-button"><img src="./assets/img/print.svg"/>Print this guide</a>
+            <div class="map-anchor" id="overview"></div>
+        </div>
+        {% for section in page.maps %}
+            <div class="map-anchor" id="{{ section[0] }}"></div>
+            <div class="page-section">
+                {% if section[1].hideTitle != true %}
+                    <h2>{{section[0]}}</h2>
+                {% endif %}
+                {% if section[1].content %}
+                    {{section[1].content | markdownify}}
+                {% endif %}
+                {% if section[1].markers %}
+                    {% for marker in section[1].markers %}
+                    <div class="marker-item" id="{{marker.title}}">
+                        {% if marker.image %}
+                            <img src="/assets/img/{{marker.image}}" class="marker-img"/>
+                        {% endif %}
+                        <h3>
+                            <img src="https://mt.google.com/vt/icon/name=icons/onion/SHARED-mymaps-container-bg_4x.png,icons/onion/SHARED-mymaps-container_4x.png,icons/onion/1738-blank-sequence_4x.png&highlight=ff000000,{{section[1].markerColor}},ff000000&scale=2.0&color=ffffffff&psize=15&text={{forloop.index}}&font=fonts/Roboto-Medium.ttf" width="30"/>
+                            {{ marker.title }}
+                        </h3>
+                        {{ marker.description | markdownify }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+    <div class="map-wrap">
+        <div id="map"></div>
+    </div>
+</div>
+<script>
+    mapsData = {{ page.maps | jsonify }};
+    function renderMap(mapName, printView) {
+        currentMapName = mapName;
+        const container = printView ? document.getElementById(mapName) : document.getElementById('map')
+        currentMap = new google.maps.Map(
+            container, {
+                zoomControlOptions: {
+                    position: google.maps.ControlPosition.LEFT_BOTTOM
+                },
+                streetViewControlOptions: {
+                    position: google.maps.ControlPosition.LEFT_BOTTOM
+                }
+            }
+        );
+        mapsRendering++;
+        bounds = new google.maps.LatLngBounds()
+        if (mapName === 'overview') {
+            const polyMap = Object.keys(mapsData).reduce((prev, cur) => {
+                prev.polygons.push({
+                    color: mapsData[cur].polygonColor,
+                    coords: mapsData[cur].polygonCoords,
+                    name: cur
+                })
+                return prev
+            },{polygons: []})
+            renderPolygons(polyMap)
+        } else {
+            map = mapsData[mapName];
+
+            if (map.polygons) {
+                renderPolygons(map)
+            }
+                
+            if (map.markers) {
+                map.markers.forEach((marker, idx) => {
+                    loc = new google.maps.LatLng(marker.coords[0], marker.coords[1])
+                    bounds.extend(loc)
+                    infoWindows[marker.title] = new google.maps.InfoWindow({
+                        content: marker.title
+                    })
+                    markers[marker.title] = new google.maps.Marker({
+                        position: loc,
+                        map: currentMap,
+                        icon: {
+                            url: `https://mt.google.com/vt/icon/name=icons/onion/SHARED-mymaps-container-bg_4x.png,icons/onion/SHARED-mymaps-container_4x.png,icons/onion/1738-blank-sequence_4x.png&highlight=ff000000,${map.markerColor},ff000000&scale=2.0&color=ffffffff&psize=15&text=${(idx + 1).toString()}&font=fonts/Roboto-Medium.ttf`,
+                            scaledSize: new google.maps.Size(40,40)
+                        },
+                        title: marker.title
+                    })
+                    markers[marker.title].addListener("click", () => {
+                        openInfoWindow(marker.title)
+                        window.location.hash = marker.title;
+                    })
+                })
+            }
+        }
+        currentMap.fitBounds(bounds, 0)
+        currentMap.panToBounds(bounds, 0)
+        currentMap.addListener('tilesloaded', () => {
+            mapsRendering--;
+        })
+    }
+    function renderPolygons(map) {
+        map.polygons.forEach(polygon => {
+            currentPolyBounds = new google.maps.LatLngBounds()
+            polygon.coords.forEach(coord => {
+            loc = new google.maps.LatLng(coord.lat, coord.lng)
+            bounds.extend(loc)
+            currentPolyBounds.extend(loc)
+            })
+            currentPoly = new google.maps.Polygon({
+            paths: polygon.coords,
+            strokeColor: polygon.color,
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: polygon.color,
+            fillOpacity: 0.35,
+            })
+            currentPolyCenter = currentPolyBounds.getCenter();
+            currentPolyLabel = new google.maps.Marker({
+            position: currentPolyCenter,
+            label: {
+                text: polygon.name,
+                color: "#000000",
+                fontSize: "20px",
+                className: "polylabel",
+                fontWeight: "900"
+            },
+            icon: {
+                url: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjyHQt+g8ABFsCIF75EPIAAAAASUVORK5CYII="
+            }
+            })
+            currentPoly.setMap(currentMap)
+            currentPolyLabel.setMap(currentMap)
+            currentPoly.addListener("click", () => {
+                window.location.hash = polygon.name;
+            })
+        })
+    }
+    function openInfoWindow(markerTitle) {
+        if (currentInfoWindow) {
+            currentInfoWindow.close();
+        }
+        infoWindows[markerTitle].open({
+            anchor: markers[markerTitle],
+            map: currentMap,
+            shouldFocus: false
+        })
+        currentInfoWindow = infoWindows[markerTitle]
+    }
+    renderMap('overview')
+    function throttle(fn, wait) {
+        var time = Date.now();
+        return function() {
+            if ((time + wait - Date.now()) < 0) {
+            fn();
+            time = Date.now();
+            }
+        }
+    }
+    document.querySelector('.text-section').addEventListener('scroll', throttle(e => {
+        const anchors = Array.from(document.querySelectorAll('.map-anchor'))
+        const selectedAnchor = anchors.reduce((prev, cur) => {
+            if (cur.getBoundingClientRect().top < 60) {
+                return cur
+            }
+            return prev
+        })
+        if (selectedAnchor.id !== currentMapName) {
+            renderMap(selectedAnchor.id);
+        }
+    }, 100))
+    const markerDivs = Array.from(document.querySelectorAll('.marker-item'))
+    markerDivs.forEach(markerDiv => {
+        markerDiv.addEventListener("click", () => {
+            history.pushState(null, null, `#${markerDiv.id}`)
+            openInfoWindow(markerDiv.id)
+        })
+    })
+    function printWhenDone() {
+        if (mapsRendering <= 0) {
+            window.setTimeout(window.print, 1000)
+        } else {
+            window.setTimeout(printWhenDone, 100)
+        }
+    }
+    document.getElementById('print-button').addEventListener('click', e => {
+        document.body.classList.add('print')
+        Array.from(document.querySelectorAll('.map-anchor')).forEach(map => {
+            renderMap(map.id, true)
+        })
+        printWhenDone();
+    })
+    // const mapAnchors = Array.from(document.querySelectorAll('.map-anchor'))
+    // if (mapAnchors.some(map => map.offsetHeight > 0)) {
+        // mapAnchors.forEach(map => {
+            // renderMap(map.id, true)
+        // })
+    // }
+    // addEventListener('beforeprint', async e => {
+        
+    // })
+    addEventListener('afterprint', e => {
+        document.body.classList.remove('print')
+    })
+</script>
+    

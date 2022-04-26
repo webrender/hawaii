@@ -1,0 +1,13 @@
+<div class="legend-wrap">
+{% for item in include.maps[include.mapname].markers %}
+<div class="legend-item">
+    {% if item.image %}
+        <img src="/assets/img/{{item.image}}" class="legend-img"/>
+    {% endif %}
+    <H4>
+        <img src="https://mt.google.com/vt/icon/name=icons/onion/SHARED-mymaps-container-bg_4x.png,icons/onion/SHARED-mymaps-container_4x.png,icons/onion/1738-blank-sequence_4x.png&highlight=ff000000,0288D1,ff000000&scale=2.0&color=ffffffff&psize=15&text={{forloop.index}}&font=fonts/Roboto-Medium.ttf" width="30"/> {{ item.title }}
+    </H4>
+    {{ item.description }}
+</div>
+{% endfor %}
+</div>
