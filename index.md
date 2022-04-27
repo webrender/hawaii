@@ -2,7 +2,7 @@
 layout: map
 exclude: true
 title: Webrender's Guide to Oahu
-image: preview.png
+image: /assets/img/preview.png
 maps:
     Honolulu:
         polygonColor: 'rgb(2,136,209)'
