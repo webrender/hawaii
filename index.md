@@ -104,7 +104,7 @@ maps:
                 image: tantalus.png
                 description: |
                     Hands-down, the most beautiful jungle drive on the entire island. Route yourself to Tantalus drive and Kolonahe Place for the full drive. **NOTE: As of April 2022, a landslide has blocked through-access of the drive.  You will need to access Round Top drive from the other direction to reach the Tantalus lookout.** Stops on the drive:
-                    * Nā Ala Hele Trails: Large network of trails on and around Tantalus drive. Something for every hiker, from 30min walks to full-day hikes. [View trail map.](/assets/img/tantalustrailmap.jpg){:target="_blank"}
+                    * Nā Ala Hele Trails: Large network of trails on and around Tantalus drive. Something for every hiker, from 30min walks to full-day hikes. [View trail map.](./assets/img/tantalustrailmap.jpg){:target="_blank"}
                     * Punchbowl Cemetery: Beautiful national cemetery.  Notably, there are clean bathrooms in the cemetery, perfect if you need to go before heading out on the trails.
             -   title: Tantalus Lookout & Puu Ualakaa State Park
                 image: tantaluslookout.jpeg
