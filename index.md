@@ -96,9 +96,6 @@ maps:
                 coords: [21.2986333,-157.8552307]
                 description: Kaka’ako is one of the most modern areas of Honolulu, filled with breweries and hot eateries. Hundreds of street murals make for a great afternoon activity.
                 image: kakaako.png
-            -   title: Chubbies Burgers 🍔
-                coords: [21.2944684,-157.8559098]
-                description: Best burgers in town, made "smash burger" style. Closest thing you can get to In-n-Out in Hawaii, especially with a side of Chub Fries. Their shakes and vietnamese iced coffee are also legit.
             -   title: Honolulu Museum of Art
                 description: An expansive art museum which includes one of the largest collections Asian and Pan-Pacific art in the United States.
                 coords: [21.3033128,-157.8503923]
@@ -237,6 +234,9 @@ maps:
                 image: cowcows.jpeg
                 coords: [21.282924,-157.7987858]
                 description: Our favorite boba shop - try their purple rice yogurt drinks, SO GOOD!
+            -   title: Chubbies Burgers 🍔
+                coords: [21.2820541,-157.7988725]
+                description: Best burgers in town, made "smash burger" style. Closest thing you can get to In-n-Out in Hawaii, especially with a side of Chub Fries. Their shakes and vietnamese iced coffee are also legit.
             -   title: The Surfing Pig 🍔
                 coords: [21.281106,-157.7969974]
                 description: Surf-themed, contemporary Hawaiian restaurant - the upscale sister restaurant of Kono's.  Great food and drinks!
