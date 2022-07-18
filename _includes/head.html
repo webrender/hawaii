@@ -5,8 +5,8 @@
     {%- seo -%}
     <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
     <link rel="stylesheet" href="{{ "/assets/styles.css" | relative_url }}">
-    <script src="https://maps.googleapis.com/maps/api/js?key={%-include apikey.html-%}"></script>  
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script src='https://unpkg.com/maplibre-gl@2.1.9/dist/maplibre-gl.js'></script>
+    <link href='https://unpkg.com/maplibre-gl@2.1.9/dist/maplibre-gl.css' rel='stylesheet' />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYZCHSPER0"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -32,7 +32,9 @@
         currentPolyLabel,
         currentInfoWindow;
       let mapsRendering = 0;
-      const markers = {}
+      let maps = {};
+      let mapBounds = {};
+      const markers = []
       const infoWindows = {}
     </script>
     {%- feed_meta -%}

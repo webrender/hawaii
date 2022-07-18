@@ -44,19 +44,33 @@ layout: default
     mapsData = {{ page.maps | jsonify }};
     function renderMap(mapName, printView) {
         currentMapName = mapName;
-        const container = printView ? document.getElementById(mapName) : document.getElementById('map')
-        currentMap = new google.maps.Map(
-            container, {
-                zoomControlOptions: {
-                    position: google.maps.ControlPosition.LEFT_BOTTOM
-                },
-                streetViewControlOptions: {
-                    position: google.maps.ControlPosition.LEFT_BOTTOM
-                }
-            }
-        );
+        const container = printView ? mapName : 'map'
         mapsRendering++;
-        bounds = new google.maps.LatLngBounds()
+        mapBounds[container] = new maplibregl.LngLatBounds()
+        if (!maps[container] || printView) {
+            maps[container] = new maplibregl.Map({
+                container,
+                style: 'https://tileserver.webrender.net/api/maps/bright/style.json', // stylesheet location
+                center: [-157.964, 20.666], // starting position [lng, lat]
+                zoom: 7 // starting zoom
+            });
+            if (!printView) {
+                maps[container].addControl(new maplibregl.NavigationControl());
+            }
+            maps[container].on('load', () => {
+                renderMapDetails(mapName,container)
+            })
+        } else {
+            let styleObj = maps[container].getStyle();
+            Object.keys(styleObj.sources).filter(s=>s !== 'openmaptiles').forEach(s => {
+                maps[container].removeLayer(s);
+                maps[container].removeSource(s);
+            })
+            markers.forEach(marker => marker.remove())
+            renderMapDetails(mapName, container)
+        }
+    }
+    function renderMapDetails(mapName, container) {
         if (mapName === 'overview') {
             const polyMap = Object.keys(mapsData).reduce((prev, cur) => {
                 prev.polygons.push({
@@ -66,90 +80,127 @@ layout: default
                 })
                 return prev
             },{polygons: []})
-            renderPolygons(polyMap)
+            renderPolygons(polyMap, container)
         } else {
-            map = mapsData[mapName];
+            thisMapData = mapsData[mapName];
 
-            if (map.polygons) {
-                renderPolygons(map)
+            if (thisMapData.polygons) {
+                renderPolygons(thisMapData, container)
             }
                 
-            if (map.markers) {
-                map.markers.forEach((marker, idx) => {
-                    loc = new google.maps.LatLng(marker.coords[0], marker.coords[1])
-                    bounds.extend(loc)
-                    infoWindows[marker.title] = new google.maps.InfoWindow({
-                        content: marker.title
+            if (thisMapData.markers) {
+                thisMapData.markers.forEach((marker, idx) => {
+                    let coords = new maplibregl.LngLat(marker.coords[1], marker.coords[0])
+                    mapBounds[container].extend(coords)
+                    let el = document.createElement('img')
+                    el.src = `https://mt.google.com/vt/icon/name=icons/onion/SHARED-mymaps-container-bg_4x.png,icons/onion/SHARED-mymaps-container_4x.png,icons/onion/1738-blank-sequence_4x.png&highlight=ff000000,${thisMapData.markerColor},ff000000&scale=2.0&color=ffffffff&psize=15&text=${(idx + 1).toString()}&font=fonts/NotoSans-Regular.ttf`
+                    el.width = "40";
+                    el.height = "40";
+                    el.title = marker.title
+                    el.style.cursor = "pointer"
+                    el.addEventListener('click', () => {
+                        window.location.hash = marker.title
                     })
-                    markers[marker.title] = new google.maps.Marker({
-                        position: loc,
-                        map: currentMap,
-                        icon: {
-                            url: `https://mt.google.com/vt/icon/name=icons/onion/SHARED-mymaps-container-bg_4x.png,icons/onion/SHARED-mymaps-container_4x.png,icons/onion/1738-blank-sequence_4x.png&highlight=ff000000,${map.markerColor},ff000000&scale=2.0&color=ffffffff&psize=15&text=${(idx + 1).toString()}&font=fonts/Roboto-Medium.ttf`,
-                            scaledSize: new google.maps.Size(40,40)
-                        },
-                        title: marker.title
-                    })
-                    markers[marker.title].addListener("click", () => {
-                        openInfoWindow(marker.title)
-                        window.location.hash = marker.title;
-                    })
+                    let thisMarker = new maplibregl.Marker(el)
+                        .setLngLat(coords)
+                        .setPopup(new maplibregl.Popup().setHTML(marker.title))
+                        .addTo(maps[container]);
+                    markers.push(thisMarker)
                 })
             }
         }
-        currentMap.fitBounds(bounds, 0)
-        currentMap.panToBounds(bounds, 0)
-        currentMap.addListener('tilesloaded', () => {
-            mapsRendering--;
-        })
+        maps[container].fitBounds(mapBounds[container], {padding: 40})
+        mapsRendering--;
     }
-    function renderPolygons(map) {
-        map.polygons.forEach(polygon => {
-            currentPolyBounds = new google.maps.LatLngBounds()
-            polygon.coords.forEach(coord => {
-            loc = new google.maps.LatLng(coord.lat, coord.lng)
-            bounds.extend(loc)
-            currentPolyBounds.extend(loc)
-            })
-            currentPoly = new google.maps.Polygon({
-            paths: polygon.coords,
-            strokeColor: polygon.color,
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: polygon.color,
-            fillOpacity: 0.35,
-            })
-            currentPolyCenter = currentPolyBounds.getCenter();
-            currentPolyLabel = new google.maps.Marker({
-            position: currentPolyCenter,
-            label: {
-                text: polygon.name,
-                color: "#000000",
-                fontSize: "20px",
-                className: "polylabel",
-                fontWeight: "900"
-            },
-            icon: {
-                url: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjyHQt+g8ABFsCIF75EPIAAAAASUVORK5CYII="
+    function renderPolygons(mapData, container) {
+        const features = mapData.polygons.map(polygon => {
+            return {
+                type: 'Feature',
+                geometry: {
+                    type: 'Polygon',
+                    coordinates: [polygon.coords.map(c => [c.lng, c.lat])],
+                    properties: {
+                        title: polygon.name
+                    }
+                },
+                properties: {
+                    name: polygon.name,
+                    color: polygon.color
+                }
             }
+        })
+        maps[container].addSource('polygons', {
+            type: 'geojson',
+            data: {
+                type: 'FeatureCollection',
+                features
+            }
+        })
+        maps[container].addLayer({
+            id: 'polygons',
+            type: 'fill',
+            source: 'polygons',
+            layout: {},
+            paint: {
+                'fill-color': ['get','color'],
+                'fill-opacity': 0.35 
+            }
+        })
+        const labelFeatures = mapData.polygons.map(polygon => {
+            let currentPolyBounds = new maplibregl.LngLatBounds()
+            polygon.coords.forEach(coord => {
+                loc = new maplibregl.LngLat(coord.lng,coord.lat)
+                currentPolyBounds.extend(loc)
+                mapBounds[container].extend(loc)
             })
-            currentPoly.setMap(currentMap)
-            currentPolyLabel.setMap(currentMap)
-            currentPoly.addListener("click", () => {
-                window.location.hash = polygon.name;
-            })
+            const center = currentPolyBounds.getCenter()
+            return {
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [center.lng, center.lat],
+                },
+                properties: {
+                    name: polygon.name
+                }
+            }
+        })
+        maps[container].on('click', 'polygons', e => {
+            window.location.hash =  e.features[0].properties.name
+        })
+        maps[container].addSource('polygonLabels', {
+            type: 'geojson',
+            data: {
+                type: 'FeatureCollection',
+                features: labelFeatures
+            }
+        })
+        maps[container].addLayer({
+            id: 'polygonLabels',
+            type: 'symbol',
+            source: 'polygonLabels',
+            layout: {
+                'text-field': ['get','name'],
+                'text-font': [
+                    'Noto Sans Bold'
+                ],
+                'text-size': 22,
+                'text-overlap': 'always'
+            },
         })
     }
     function openInfoWindow(markerTitle) {
-        if (currentInfoWindow) {
-            currentInfoWindow.close();
-        }
-        infoWindows[markerTitle].open({
-            anchor: markers[markerTitle],
-            map: currentMap,
-            shouldFocus: false
+        markers.forEach(marker => {
+            if (markerTitle === marker.getElement().title) {
+                if (!marker.getPopup().isOpen()) {
+                    marker.togglePopup()
+                }
+            } else {
+                if (marker.getPopup().isOpen()) {
+                    marker.togglePopup()
+                }
+            }
         })
-        currentInfoWindow = infoWindows[markerTitle]
     }
     renderMap('overview')
     function throttle(fn, wait) {
@@ -194,15 +245,6 @@ layout: default
         })
         printWhenDone();
     })
-    // const mapAnchors = Array.from(document.querySelectorAll('.map-anchor'))
-    // if (mapAnchors.some(map => map.offsetHeight > 0)) {
-        // mapAnchors.forEach(map => {
-            // renderMap(map.id, true)
-        // })
-    // }
-    // addEventListener('beforeprint', async e => {
-        
-    // })
     addEventListener('afterprint', e => {
         document.body.classList.remove('print')
     })

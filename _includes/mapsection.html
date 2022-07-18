@@ -3,11 +3,13 @@
 mapsData = {{ include.maps | jsonify }};
 mapName = {{ include.mapname | jsonify }}
 map = mapsData[mapName];
-console.log(map)
 
-currentMap = new google.maps.Map(
-    document.getElementById(`map-${mapName}`)
-);
+currentMap = new maplibregl.Map({
+  container: 'map',
+  style: 'https://tileserver.webrender.net/api/maps/bright/style.json', // stylesheet location
+  center: [-158.012, 21.474], // starting position [lng, lat]
+  zoom: 9 // starting zoom
+});
 
 bounds = new google.maps.LatLngBounds()
 

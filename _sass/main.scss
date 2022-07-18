@@ -223,4 +223,14 @@ body.print {
         height: 10in;
         column-span: all;
     }
+    .maplibregl-ctrl-attrib-button {
+        display: none;
+    }
+    .maplibregl-ctrl-attrib {
+        background: none;
+    }
+}
+
+.maplibregl-popup-close-button:focus-visible {
+    outline: none;
 }
