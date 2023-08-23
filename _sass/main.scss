@@ -19,16 +19,44 @@
     animation-duration: 80s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    opacity: 0.75;
+}
+#bgCanvas2 {
+    position: absolute;
+    z-index: -2;
+    height: 30px;
+    width: 100%;
+    // z-index: 20;
+    // height: 200px;
+    // width: 200px;
+    background: rgb(0,212,255);
+    background: linear-gradient(135deg, rgba(0,182,219,1) 0%, rgba(2,140,227,1) 5%, rgba(0,208,222,1) 10%, rgba(0,76,218,1) 15%, rgba(52,181,183,1) 20%, rgba(1,211,218,1) 25%, rgba(18,164,193,1) 30%, rgba(6,79,206,1) 35%, rgba(0,217,150,1) 40%, rgba(0,131,224,1) 45%, rgba(52,179,205,1) 50%, rgba(0,215,157,1) 55%, rgba(0,95,219,1) 60%, rgba(48,201,185,1) 65%, rgba(21,87,222,1) 70%, rgba(0,194,215,1) 75%, rgba(0,223,189,1) 80%, rgba(0,151,221,1) 85%, rgba(31,106,170,1) 90%, rgba(9,212,150,1) 95%, rgba(2,161,194,1) 100%);
+    background-size: 4000px 4000px;
+    animation-name: move-bg-2;
+    animation-duration: 80s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 @keyframes move-bg {
     0% {
-        background-position: 0% 50%;
+        background-position: 0% 0%;
     }
     50% {
-        background-position: 100% 50%;
+        background-position: 100% 0%;
     }
     100% {
-        background-position: 0% 50%;
+        background-position: 0% 0%;
+    }
+}
+@keyframes move-bg-2 {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
     }
 }
 .site-header {
