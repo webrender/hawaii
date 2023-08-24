@@ -1,252 +1,307 @@
 ---
 layout: default
 ---
+
 <input id="map-toggle" type="checkbox" />
 <label for="map-toggle" class="map-toggle"></label>
-<div class="map-layout">
-    <div class="text-section">
-        <div class="overview-section">
-            <div>{{ page.content | markdownify}}</div>
-            <a id="print-button"><img src="./assets/img/print.svg"/>Print this guide</a>
-            <div class="map-anchor" id="overview"></div>
-        </div>
-        {% for section in page.maps %}
-            <div class="map-anchor" id="{{ section[0] }}"></div>
-            <div class="page-section">
-                {% if section[1].hideTitle != true %}
-                    <h2>{{section[0]}}</h2>
-                {% endif %}
-                {% if section[1].content %}
-                    {{section[1].content | markdownify}}
-                {% endif %}
-                {% if section[1].markers %}
-                    {% for marker in section[1].markers %}
-                    <div class="marker-item" id="{{marker.title}}">
-                        {% if marker.image %}
-                            <img src="./assets/img/{{marker.image}}" class="marker-img"/>
-                        {% endif %}
-                        <h3>
-                            <img src="https://mt.google.com/vt/icon/name=icons/onion/SHARED-mymaps-container-bg_4x.png,icons/onion/SHARED-mymaps-container_4x.png,icons/onion/1738-blank-sequence_4x.png&highlight=ff000000,{{section[1].markerColor}},ff000000&scale=2.0&color=ffffffff&psize=15&text={{forloop.index}}&font=fonts/Roboto-Medium.ttf" width="30"/>
-                            {{ marker.title }}
-                        </h3>
-                        {{ marker.description | markdownify }}
-                        </div>
-                    {% endfor %}
-                {% endif %}
-            </div>
-        {% endfor %}
+<div class="map-layout split">
+  <div class="text-section">
+    <div class="overview-section">
+      <div>{{ page.content | markdownify}}</div>
+      <a id="print-button"
+        ><img src="./assets/img/print.svg" />Print this guide</a
+      >
+      <div class="map-anchor" id="overview"></div>
     </div>
-    <div class="map-wrap">
-        <div id="map"></div>
+    {% for section in page.maps %}
+    <div class="map-anchor" id="{{ section[0] }}"></div>
+    <div class="page-section">
+      {% if section[1].hideTitle != true %}
+      <h2>{{section[0]}}</h2>
+      {% endif %} {% if section[1].content %} {{section[1].content |
+      markdownify}} {% endif %} {% if section[1].markers %} {% for marker in
+      section[1].markers %}
+      <div class="marker-item" id="{{marker.title}}">
+        {% if marker.image %}
+        <img src="./assets/img/{{marker.image}}" class="marker-img" />
+        {% endif %}
+        <h3>
+          <img
+            src="https://mt.google.com/vt/icon/name=icons/onion/SHARED-mymaps-container-bg_4x.png,icons/onion/SHARED-mymaps-container_4x.png,icons/onion/1738-blank-sequence_4x.png&highlight=ff000000,{{section[1].markerColor}},ff000000&scale=2.0&color=ffffffff&psize=15&text={{forloop.index}}&font=fonts/Roboto-Medium.ttf"
+            width="30"
+          />
+          {{ marker.title }}
+        </h3>
+        {{ marker.description | markdownify }}
+      </div>
+      {% endfor %} {% endif %}
     </div>
+    {% endfor %}
+  </div>
+  <div class="map-wrap">
+    <div id="map"></div>
+  </div>
 </div>
 <script>
-    mapsData = {{ page.maps | jsonify }};
-    function renderMap(mapName, printView) {
-        currentMapName = mapName;
-        const container = printView ? mapName : 'map'
-        mapsRendering++;
-        mapBounds[container] = new maplibregl.LngLatBounds()
-        if (!maps[container] || printView) {
-            maps[container] = new maplibregl.Map({
-                container,
-                style: 'https://tileserver.webrender.net/api/maps/bright/style.json', // stylesheet location
-                center: [-157.964, 20.666], // starting position [lng, lat]
-                zoom: 7 // starting zoom
-            });
-            if (!printView) {
-                maps[container].addControl(new maplibregl.NavigationControl());
+  var currentDirection
+      var currentSplit
+      var determineDirection = function () {
+        if (window.innerWidth <= 600 ) {
+          if (currentDirection !== "vertical") {
+            if (currentSplit) {
+              currentSplit.destroy()
             }
-            maps[container].on('load', () => {
-                renderMapDetails(mapName,container)
+            currentSplit = Split(['.text-section', '.map-wrap'], {
+                minSize: 0,
+                direction: 'vertical',
+                sizes: [50, 50]
             })
-        } else {
-            let styleObj = maps[container].getStyle();
-            Object.keys(styleObj.sources).filter(s=>s !== 'openmaptiles').forEach(s => {
-                maps[container].removeLayer(s);
-                maps[container].removeSource(s);
-            })
-            markers.forEach(marker => marker.remove())
-            renderMapDetails(mapName, container)
-        }
-    }
-    function renderMapDetails(mapName, container) {
-        if (mapName === 'overview') {
-            const polyMap = Object.keys(mapsData).reduce((prev, cur) => {
-                prev.polygons.push({
-                    color: mapsData[cur].polygonColor,
-                    coords: mapsData[cur].polygonCoords,
-                    name: cur
-                })
-                return prev
-            },{polygons: []})
-            renderPolygons(polyMap, container)
-        } else {
-            thisMapData = mapsData[mapName];
+            currentDirection = "vertical"
+          }
 
-            if (thisMapData.polygons) {
-                renderPolygons(thisMapData, container)
+        } else if (currentDirection !== "horizontal") {
+          if (currentSplit) {
+              currentSplit.destroy()
             }
-                
-            if (thisMapData.markers) {
-                thisMapData.markers.forEach((marker, idx) => {
-                    let coords = new maplibregl.LngLat(marker.coords[1], marker.coords[0])
-                    mapBounds[container].extend(coords)
-                    let el = document.createElement('img')
-                    el.src = `https://mt.google.com/vt/icon/name=icons/onion/SHARED-mymaps-container-bg_4x.png,icons/onion/SHARED-mymaps-container_4x.png,icons/onion/1738-blank-sequence_4x.png&highlight=ff000000,${thisMapData.markerColor},ff000000&scale=2.0&color=ffffffff&psize=15&text=${(idx + 1).toString()}&font=fonts/NotoSans-Regular.ttf`
-                    el.width = "40";
-                    el.height = "40";
-                    el.title = marker.title
-                    el.style.cursor = "pointer"
-                    el.addEventListener('click', () => {
-                        window.location.hash = marker.title
-                    })
-                    let thisMarker = new maplibregl.Marker(el)
-                        .setLngLat(coords)
-                        .setPopup(new maplibregl.Popup().setHTML(marker.title))
-                        .addTo(maps[container]);
-                    markers.push(thisMarker)
-                })
-            }
+            currentSplit = Split(['.text-section', '.map-wrap'], {
+              minSize: 0,
+              direction: 'horizontal',
+              sizes: [35, 65]
+          })
+          currentDirection = "horizontal"
         }
-        maps[container].fitBounds(mapBounds[container], {padding: 40})
-        mapsRendering--;
-    }
-    function renderPolygons(mapData, container) {
-        const features = mapData.polygons.map(polygon => {
-            return {
-                type: 'Feature',
-                geometry: {
-                    type: 'Polygon',
-                    coordinates: [polygon.coords.map(c => [c.lng, c.lat])],
-                    properties: {
-                        title: polygon.name
-                    }
-                },
-                properties: {
-                    name: polygon.name,
-                    color: polygon.color
+      }
+      determineDirection();
+    window.addEventListener('resize', function () {
+      var timeout;
+      // If there's a timer, cancel it
+      if (timeout) {
+        window.cancelAnimationFrame(timeout);
+      }
+      // Setup the new requestAnimationFrame()
+      timeout = window.requestAnimationFrame(function () {
+        // Run our scroll functions
+        determineDirection()
+      });
+    });
+      mapsData = {{ page.maps | jsonify }};
+      function renderMap(mapName, printView) {
+          currentMapName = mapName;
+          const container = printView ? mapName : 'map'
+          mapsRendering++;
+          mapBounds[container] = new maplibregl.LngLatBounds()
+          if (!maps[container] || printView) {
+              maps[container] = new maplibregl.Map({
+                  container,
+                  style: 'https://tileserver.webrender.net/api/maps/bright/style.json', // stylesheet location
+                  center: [-157.964, 20.666], // starting position [lng, lat]
+                  zoom: 7 // starting zoom
+              });
+              const resizer = new ResizeObserver(() => {
+                var timeout;
+                // If there's a timer, cancel it
+                if (timeout) {
+                    window.cancelAnimationFrame(timeout);
                 }
-            }
-        })
-        maps[container].addSource('polygons', {
-            type: 'geojson',
-            data: {
-                type: 'FeatureCollection',
-                features
-            }
-        })
-        maps[container].addLayer({
-            id: 'polygons',
-            type: 'fill',
-            source: 'polygons',
-            layout: {},
-            paint: {
-                'fill-color': ['get','color'],
-                'fill-opacity': 0.35 
-            }
-        })
-        const labelFeatures = mapData.polygons.map(polygon => {
-            let currentPolyBounds = new maplibregl.LngLatBounds()
-            polygon.coords.forEach(coord => {
-                loc = new maplibregl.LngLat(coord.lng,coord.lat)
-                currentPolyBounds.extend(loc)
-                mapBounds[container].extend(loc)
-            })
-            const center = currentPolyBounds.getCenter()
-            return {
-                type: 'Feature',
-                geometry: {
-                    type: 'Point',
-                    coordinates: [center.lng, center.lat],
-                },
-                properties: {
-                    name: polygon.name
-                }
-            }
-        })
-        maps[container].on('click', 'polygons', e => {
-            window.location.hash =  e.features[0].properties.name
-        })
-        maps[container].addSource('polygonLabels', {
-            type: 'geojson',
-            data: {
-                type: 'FeatureCollection',
-                features: labelFeatures
-            }
-        })
-        maps[container].addLayer({
-            id: 'polygonLabels',
-            type: 'symbol',
-            source: 'polygonLabels',
-            layout: {
-                'text-field': ['get','name'],
-                'text-font': [
-                    'Noto Sans Bold'
-                ],
-                'text-size': 22,
-                'text-overlap': 'always'
-            },
-        })
-    }
-    function openInfoWindow(markerTitle) {
-        markers.forEach(marker => {
-            if (markerTitle === marker.getElement().title) {
-                if (!marker.getPopup().isOpen()) {
-                    marker.togglePopup()
-                }
-            } else {
-                if (marker.getPopup().isOpen()) {
-                    marker.togglePopup()
-                }
-            }
-        })
-    }
-    renderMap('overview')
-    function throttle(fn, wait) {
-        var time = Date.now();
-        return function() {
-            if ((time + wait - Date.now()) < 0) {
-            fn();
-            time = Date.now();
-            }
-        }
-    }
-    document.querySelector('.text-section').addEventListener('scroll', throttle(e => {
-        const anchors = Array.from(document.querySelectorAll('.map-anchor'))
-        const selectedAnchor = anchors.reduce((prev, cur) => {
-            if (cur.getBoundingClientRect().top < 60) {
-                return cur
-            }
-            return prev
-        })
-        if (selectedAnchor.id !== currentMapName) {
-            renderMap(selectedAnchor.id);
-        }
-    }, 100))
-    const markerDivs = Array.from(document.querySelectorAll('.marker-item'))
-    markerDivs.forEach(markerDiv => {
-        markerDiv.addEventListener("click", () => {
-            history.pushState(null, null, `#${markerDiv.id}`)
-            openInfoWindow(markerDiv.id)
-        })
-    })
-    function printWhenDone() {
-        if (mapsRendering <= 0) {
-            window.setTimeout(window.print, 1000)
-        } else {
-            window.setTimeout(printWhenDone, 100)
-        }
-    }
-    document.getElementById('print-button').addEventListener('click', e => {
-        document.body.classList.add('print')
-        Array.from(document.querySelectorAll('.map-anchor')).forEach(map => {
-            renderMap(map.id, true)
-        })
-        printWhenDone();
-    })
-    addEventListener('afterprint', e => {
-        document.body.classList.remove('print')
-    })
+                // Setup the new requestAnimationFrame()
+                timeout = window.requestAnimationFrame(function () {
+                    // Run our scroll functions
+                    maps[container].resize()
+                });
+              });
+              resizer.observe(document.getElementById(container)); 
+              if (!printView) {
+                  maps[container].addControl(new maplibregl.NavigationControl());
+              }
+              maps[container].on('load', () => {
+                  renderMapDetails(mapName,container)
+              })
+          } else {
+              let styleObj = maps[container].getStyle();
+              Object.keys(styleObj.sources).filter(s=>s !== 'openmaptiles').forEach(s => {
+                  maps[container].removeLayer(s);
+                  maps[container].removeSource(s);
+              })
+              markers.forEach(marker => marker.remove())
+              renderMapDetails(mapName, container)
+          }
+      }
+      function renderMapDetails(mapName, container) {
+          if (mapName === 'overview') {
+              const polyMap = Object.keys(mapsData).reduce((prev, cur) => {
+                  prev.polygons.push({
+                      color: mapsData[cur].polygonColor,
+                      coords: mapsData[cur].polygonCoords,
+                      name: cur
+                  })
+                  return prev
+              },{polygons: []})
+              renderPolygons(polyMap, container)
+          } else {
+              thisMapData = mapsData[mapName];
+
+              if (thisMapData.polygons) {
+                  renderPolygons(thisMapData, container)
+              }
+
+              if (thisMapData.markers) {
+                  thisMapData.markers.forEach((marker, idx) => {
+                      let coords = new maplibregl.LngLat(marker.coords[1], marker.coords[0])
+                      mapBounds[container].extend(coords)
+                      let el = document.createElement('img')
+                      el.src = `https://mt.google.com/vt/icon/name=icons/onion/SHARED-mymaps-container-bg_4x.png,icons/onion/SHARED-mymaps-container_4x.png,icons/onion/1738-blank-sequence_4x.png&highlight=ff000000,${thisMapData.markerColor},ff000000&scale=2.0&color=ffffffff&psize=15&text=${(idx + 1).toString()}&font=fonts/NotoSans-Regular.ttf`
+                      el.width = "40";
+                      el.height = "40";
+                      el.title = marker.title
+                      el.style.cursor = "pointer"
+                      el.addEventListener('click', () => {
+                          window.location.hash = marker.title
+                      })
+                      let thisMarker = new maplibregl.Marker(el)
+                          .setLngLat(coords)
+                          .setPopup(new maplibregl.Popup().setHTML(marker.title))
+                          .addTo(maps[container]);
+                      markers.push(thisMarker)
+                  })
+              }
+          }
+          maps[container].fitBounds(mapBounds[container], {padding: 40})
+          mapsRendering--;
+      }
+      function renderPolygons(mapData, container) {
+          const features = mapData.polygons.map(polygon => {
+              return {
+                  type: 'Feature',
+                  geometry: {
+                      type: 'Polygon',
+                      coordinates: [polygon.coords.map(c => [c.lng, c.lat])],
+                      properties: {
+                          title: polygon.name
+                      }
+                  },
+                  properties: {
+                      name: polygon.name,
+                      color: polygon.color
+                  }
+              }
+          })
+          maps[container].addSource('polygons', {
+              type: 'geojson',
+              data: {
+                  type: 'FeatureCollection',
+                  features
+              }
+          })
+          maps[container].addLayer({
+              id: 'polygons',
+              type: 'fill',
+              source: 'polygons',
+              layout: {},
+              paint: {
+                  'fill-color': ['get','color'],
+                  'fill-opacity': 0.35
+              }
+          })
+          const labelFeatures = mapData.polygons.map(polygon => {
+              let currentPolyBounds = new maplibregl.LngLatBounds()
+              polygon.coords.forEach(coord => {
+                  loc = new maplibregl.LngLat(coord.lng,coord.lat)
+                  currentPolyBounds.extend(loc)
+                  mapBounds[container].extend(loc)
+              })
+              const center = currentPolyBounds.getCenter()
+              return {
+                  type: 'Feature',
+                  geometry: {
+                      type: 'Point',
+                      coordinates: [center.lng, center.lat],
+                  },
+                  properties: {
+                      name: polygon.name
+                  }
+              }
+          })
+          maps[container].on('click', 'polygons', e => {
+              window.location.hash =  e.features[0].properties.name
+          })
+          maps[container].addSource('polygonLabels', {
+              type: 'geojson',
+              data: {
+                  type: 'FeatureCollection',
+                  features: labelFeatures
+              }
+          })
+          maps[container].addLayer({
+              id: 'polygonLabels',
+              type: 'symbol',
+              source: 'polygonLabels',
+              layout: {
+                  'text-field': ['get','name'],
+                  'text-font': [
+                      'Noto Sans Bold'
+                  ],
+                  'text-size': 22,
+                  'text-overlap': 'always'
+              },
+          })
+      }
+      function openInfoWindow(markerTitle) {
+          markers.forEach(marker => {
+              if (markerTitle === marker.getElement().title) {
+                  if (!marker.getPopup().isOpen()) {
+                      marker.togglePopup()
+                  }
+              } else {
+                  if (marker.getPopup().isOpen()) {
+                      marker.togglePopup()
+                  }
+              }
+          })
+      }
+      renderMap('overview')
+      function throttle(fn, wait) {
+          var time = Date.now();
+          return function() {
+              if ((time + wait - Date.now()) < 0) {
+              fn();
+              time = Date.now();
+              }
+          }
+      }
+      document.querySelector('.text-section').addEventListener('scroll', throttle(e => {
+          const anchors = Array.from(document.querySelectorAll('.map-anchor'))
+          const selectedAnchor = anchors.reduce((prev, cur) => {
+              if (cur.getBoundingClientRect().top < 60) {
+                  return cur
+              }
+              return prev
+          })
+          if (selectedAnchor.id !== currentMapName) {
+              renderMap(selectedAnchor.id);
+          }
+      }, 100))
+      const markerDivs = Array.from(document.querySelectorAll('.marker-item'))
+      markerDivs.forEach(markerDiv => {
+          markerDiv.addEventListener("click", () => {
+              history.pushState(null, null, `#${markerDiv.id}`)
+              openInfoWindow(markerDiv.id)
+          })
+      })
+      function printWhenDone() {
+          if (mapsRendering <= 0) {
+            //   window.setTimeout(window.print, 1000)
+          } else {
+              window.setTimeout(printWhenDone, 100)
+          }
+      }
+      document.getElementById('print-button').addEventListener('click', e => {
+          document.body.classList.add('print')
+          Array.from(document.querySelectorAll('.map-anchor')).forEach(map => {
+              renderMap(map.id, true)
+          })
+          printWhenDone();
+      })
+      addEventListener('afterprint', e => {
+          document.body.classList.remove('print')
+      })
 </script>
-    
