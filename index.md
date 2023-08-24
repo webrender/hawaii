@@ -68,9 +68,6 @@ maps:
                 image: singcheongyuan.png
                 coords: [21.309222,-157.8665154]
                 description: Best jin dui (fried sesame balls, filled with red bean paste) on the island - also known for their chocolate strawberry mochi mooncakes.
-            -   title: Little Village Noodle House 🍔
-                coords: [21.3133257,-157.8598307]
-                description: Our favorite Chinese restaurant on the island.
             -   title: Tea at 1024 🍔
                 coords: [21.3083852,-157.8605431]
                 description: High tea with all the fixings! Frilly tablecloths, fancy cups, sweet and savory snacks. Dine in, or even better, rent a basket and do your tea time wherever you'd like!
@@ -90,6 +87,7 @@ maps:
                     Trendy shopping center in the heart of the Kaka'ako neighborhood.  Some of our favorite places include:
                     * Lanikai Juice: Delicious, fresh juices and smoothies
                     * ARVO: Third-wave coffee bar with extremely instagrammable beverages and food.
+                    * Butcher & Bird: Butcher shop that serves up sausages and burgers. The burger is one of the most delicious I've ever had in my entire life.
                     * Hank's Haute Dogs: Hot dogs in every variant you could think of, in addition to burgers, sandwiches, and *amazing* fries.
                     * Highway Inn: Our favorite place for traditional Hawaiian food, served fresh and hot.  Try the pipikaula!
             -   title: Kaka'ako Murals 🐶🍔🛍
@@ -223,11 +221,11 @@ maps:
             -   title: The Curb 🍔
                 description: Cozy cafe with great coffee, plus tasty baked goods and chocolate.
                 coords: [21.2851204,-157.8053989]
-            -   title: Kaimuki Superette & Mud Hen Water 🍔
-                description: These two sister restaurants share an outdoor seating space.  Kaimuki Superette, open for breakfast/lunch, serves locally-sourced vegan-friendly cuisine.  Their grilled lemon lemonade is a treat! Mud Hen Water, open for dinnre, serves delicious, inventive Hawaiian small plates & cocktails. Also in the same space is Local IA, a seafood wholesaler, and Little Vessels, a vegan donut popup open on the weekends. 
+            -   title: The Local General Store & Mud Hen Water 🍔🐶
+                description: These two businesses share an outdoor seating space.  The Local General Store is a butcher and bakery - get here early because their pastries sell our by mid-day. Arguably the best croissants in Hawaii. Mud Hen Water, open for dinner, serves delicious, inventive Hawaiian small plates & cocktails. Also in the same space is Local IA, a seafood wholesaler, and Little Vessels, a vegan donut popup open on the weekends. 
                 coords: [21.2845764,-157.8022233] 
-            -   title: AV Restaurant 🍔
-                description: AV stands for "All Vegan", but you wouldn't know it looking at many of AV Restaurant's 13-16 course menu. A culinary delight for vegans and non-vegans alike.  $99 per person, not including tax/tip or sake pairings.
+            -   title: XO & AV Restaurants 🍔
+                description: AV stands for "All Vegan", but you wouldn't know it looking at many of AV Restaurant's 13-16 course menu. A culinary delight for vegans and non-vegans alike.  $99 per person, not including tax/tip or sake pairings. XO, right down the road and owned/operated by the same folks, serves delicious izakaya-style plates that change on a weekly basis.
                 image: avrestaurant.jpg
                 coords: [21.2825452,-157.800158]
             -   title: Cowcow's Tea 🍔
@@ -236,7 +234,7 @@ maps:
                 description: Our favorite boba shop - try their purple rice yogurt drinks, SO GOOD!
             -   title: Chubbies Burgers 🍔
                 coords: [21.2820541,-157.7988725]
-                description: Best burgers in town, made "smash burger" style. Closest thing you can get to In-n-Out in Hawaii, especially with a side of Chub Fries. Their shakes and vietnamese iced coffee are also legit.
+                description: Best burgers in town, made "smash burger" style. Closest thing you can get to In-n-Out in Hawaii, especially with a side of Chub Fries. Their shakes are also legit.
             -   title: The Surfing Pig 🍔
                 coords: [21.281106,-157.7969974]
                 description: Surf-themed, contemporary Hawaiian restaurant - the upscale sister restaurant of Kono's.  Great food and drinks!
@@ -687,10 +685,9 @@ maps:
                 description: |
                     This food truck spot has over 20 different trucks for you to sample, and is the center of the town of Kahuku.  Some of our favorites:
                     * Ono Yo: Tasty frozen yogurt concoctions!
-                    * Badabingsu: Bingsu, or shaved snow, is a korean iced treat.  Try it if you've already gotten your fill of shaved ice!
                     * Giovanni's Shrimp: The most famous north shore shrimp truck of all.
                     * Mike's Huli Huli Chicken: Delicious, slow roasted rotisserie chicken.
-                    * Raised by the Wave: Tasty vegan dishes.
+                    * Raised by the Waves: Tasty vegan dishes.
                 coords: [21.6782946,-157.952197]
             -   title: Fumi's Kahuku Shrimp
                 description: Giovanni's may be the most well-known, but Fumi's is our favorite stop for north shore shrimp. Whether it be here or one of the other venues, garlic shrimp should be a must-try on your north shore journey!
@@ -704,7 +701,7 @@ maps:
                     * The Stables at Turtle Bay: Make a reservation for fun oceanside horseback riding!
                 coords: [21.7054038,-157.9971531]
             -   title: Kawela Bay Beach Park 🍔🐶
-                description: Located right next to Turtle Bay, Kawela Bay has miles of trails open to the public. In addition, the beaches of Kawela bay are quiet compared to the others on the north shore - we often come here and have the beach all to ourselves.  Our favorite place to take the dogs!
+                description: Located right next to Turtle Bay, Kawela Bay has miles of trails open to the public. In addition, the beaches of Kawela Bay are quiet compared to the others on the north shore - we often come here and have the beach all to ourselves.  Our favorite place to take the dogs! You've also got a good chance of spotting turtles on the beach here, but please keep a 10ft distance from these beautiful creatures.
                 coords: [21.6973731,-158.0067635]
             -   title: Kulima Farm Stand 🍔🐶
                 coords: [21.6924734,-158.005335]
