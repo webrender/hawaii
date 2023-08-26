@@ -61,9 +61,19 @@ maps:
             -   title: Liliha Bakery 🍔
                 description: Yummy bakery and restaurant. Great loco moco, great eclairs!
                 coords: [21.3133698,-157.8696]
+            -   title: Double Three Ice Cream 🍔
+                description:  If you've never had ice cream in a bubble waffle before, this is worth a try.  Waffles are made hot and fresh, there's a ton of delicious toppings to choose from, and the portions are huge. Second location in Kailua.
+                coords: [21.3216497,-157.8759548]
+                image: doublethree.png
+            -   title: Nami Kaze
+                description: Delicious sushi and fancy brunch at this japanese restaurant that gets fish right off the boats. Upscale, but not too pricey, a perfect spot for a celebration or just a lazy sunday morning.
+                coords: [21.3177375,-157.8807734]
             -   title: Chau's Fresh Fruit 🍔
                 description: The best pirri mangoes!
                 coords: [21.3146528,-157.8633347]
+            -   title: Fook Lam 🍔
+                description:  Arguably the best dim sum on Oahu. You know it's good when they roll out the metal steamer carts!
+                coords: [21.3140782,-157.8618709] 
             -   title: Sing Cheong Yuan Bakery 🍔
                 image: singcheongyuan.png
                 coords: [21.309222,-157.8665154]
@@ -71,6 +81,13 @@ maps:
             -   title: Tea at 1024 🍔
                 coords: [21.3083852,-157.8605431]
                 description: High tea with all the fixings! Frilly tablecloths, fancy cups, sweet and savory snacks. Dine in, or even better, rent a basket and do your tea time wherever you'd like!
+            -   title: Senia 🍔
+                coords: [21.3113573,-157.866198]
+                description: A must-visit for any fine dining fan. Presentation, flavor, pairings - everything about Senia is flawless. If you do decide to visit, try and attend the tasting menu at the Chef's counter - there's only one 6:30 seating on Fridays and Saturdays, so book early. For a similar but slightly more casual experience, check out Podmore, the next item on this list, which has the same owners and head chef.
+            -   title: Podmore 🍔
+                coords: [21.3074115,-157.8638265]
+                description: One of our absolute favorite date night spots.  With chef Anthony Rush of Senia at the helm, the food and drinks at this swanky upscale bar are excellent, but it's easier to get a reservation and a more relaxed atmosphere than it's big sibling. My favorite beverage is the Chung Chow, pictured above - a delight for all the senses.
+                image: podmore.jpeg
             -   title: Iolani Palace
                 coords: [21.3053178,-157.8581689]
                 description: Iolani is the only royal palace in the United States, and learning about its history is an essential part of respecting the culture and heritage of Hawai’i. Guided tours book extremely quickly, so reserve in advance.
@@ -103,9 +120,15 @@ maps:
             -   title: Istanbul Hawaii 🍔
                 description: Delicious turkish food - their kebabs are amazing.  Upscale, but not too fancy, a great place to celebrate the end of your week.
                 coords: [21.294313,-157.8542309]
+            -   title: Tali's Bagels & Shmears
+                description: Founded by an Oahu local and a New Yorker, Tali's has the best bagels on the island, boiled and made to New York standards. Their shmears, bialis, and israeli iced coffee are all excellent as well - just be prepared for a line, and get there early because they do sell out. 
+                coords: [21.2927457,-157.8553622]
             -   title: Scratch Kitchen 🍔🐶
                 coords: [21.2933715,-157.8504644]
                 description: Eatery with great brunch and lunch items. Recommend their chicken and waffles, and milk & cereal pancakes, and grits. Dog-friendly patio.
+            -   title: Purvé Donut Stop
+                coords: [21.2943841,-157.8498326]
+                description: Delicious, made-to-order donuts made right in front of you. A must for any donut afficionado. Second location at Kahala Mall.
             -   title: Ala Moana Center 🐶🍔🛍
                 coords: [21.290622,-157.8465279]
                 image: alamoana.jpeg
@@ -153,6 +176,10 @@ maps:
                     A wonderful hotel on the edge of Waikiki - great for people who want to be away from the bustling crowds but close enough to walk to everything in town.  Accepts dogs! Also home to two of our recommended restaurants:
                     * Katsumidori Sushi: Fun, upscale sushi restaurant, located next to the lobby.
                     * 100 Sails: In our opinion, the best buffet experience in Hawaii, along with great sunset views.  Located on the 2nd floor.
+            -   title: Hilton Hawaiian Village Fireworks
+                coords: [21.2814946,-157.8436614]
+                description: What better to top off your trip than fireworks over the waters of Honolulu?  The Hilton Hawaiian Village's fireworks show starts at 8pm on the dot, Friday evenings.  I suggest watching across the bay from Kapiolani Park - check out Barefoot Beach Cafe further down this list for a perfect viewing spot. 
+                image: fireworks.jpeg
             -   title: House Without a Key
                 description: Located within the Halekulani Hotel, House Without a Key offers a spectacular, unobstructed ocean vista, along with live music and hula. Highly recommend coming here for cocktails at sunset (we have seen the green flash here!) but *do not recommend dinner* - the cocktails are good but the food is mediocre.
                 coords: [21.2774973,-157.834128]
@@ -208,6 +235,16 @@ maps:
             -   title: Waikiki Aquarium
                 coords: [21.2679149,-157.8246587]
                 description: Small but packed aquarium featuring Hawaiian & tropical Pacific marine animals.  Located next to Kapiolani Beach Park. Great rainy day activity, especially with kids.
+            -   title: Diamond Head
+                description: Arguably the most distinct element in Honolulu's skyline, Diamond Head towers over the rest of the city.  Take the relatively-easy 45 minute hike to the top for spectacular views of Honolulu, especially at sunset. Bring water, because there is very little shade on the path.
+                coords: [21.2596925,-157.8142678]
+            -   title: Diamond Head Market & Grill
+                description: One of the best plate lunch spots in town. Perfect place to stop for lunch or dinner on your way to Diamond Head, or if you're headed out of town for the day. Probably my favorite mac salad on the whole island..
+                coords: [21.269804,-157.8141796]
+            -   title: Tonkatsu Tamafuji
+                description: Do you like tonkatsu? Because if so, this may well be THE BEST KATSU IN YOUR ENTIRE LIFE. Although the premises are unassuming, the lines and 3 month reservation wait should be an indication that you're in for something special. There's several types of katsu to choose from, you make and customize your own sauce at the table, and there's endless servings of the most finely-shredded lettuce you've ever seen. If you don't have the time to make a reservation 2 months in advance, you have two options - 1) try calling right when they open to check for cancellations, and they will often be able to squeeze you in, or 2) line up 30min before they open and you'll usually be able to get a table pretty quickly.
+                image: tamafuji.jpg
+                coords: [21.274965,-157.8179854] 
             -   title: Kono's Honolulu 🍔
                 coords: [21.2852889,-157.8155042]
                 description: Some of the best kalua pig on the island, this place is known for their kalua pig burritos and tasty milkshakes.  More locations in Waikiki, Kailua, and Hale'iwa.
@@ -224,10 +261,16 @@ maps:
             -   title: The Local General Store & Mud Hen Water 🍔🐶
                 description: These two businesses share an outdoor seating space.  The Local General Store is a butcher and bakery - get here early because their pastries sell our by mid-day. Arguably the best croissants in Hawaii. Mud Hen Water, open for dinner, serves delicious, inventive Hawaiian small plates & cocktails. Also in the same space is Local IA, a seafood wholesaler, and Little Vessels, a vegan donut popup open on the weekends. 
                 coords: [21.2845764,-157.8022233] 
+            -   title: Miro Kaimuki
+                coords: [21.2846862,-157.8073557]
+                description: For a fancy night out, check out this modern french bistro featuring Japanese-inspired prix-fixe gastronomic tours as well as guest chefs. One of the hottest new fine dining spots in Honolulu.
             -   title: XO & AV Restaurants 🍔
                 description: AV stands for "All Vegan", but you wouldn't know it looking at many of AV Restaurant's 13-16 course menu. A culinary delight for vegans and non-vegans alike.  $99 per person, not including tax/tip or sake pairings. XO, right down the road and owned/operated by the same folks, serves delicious izakaya-style plates that change on a weekly basis.
                 image: avrestaurant.jpg
                 coords: [21.2825452,-157.800158]
+            -   title: Koko Head Cafe 🍔🐶
+                description: Celebrity Chef Lee Anne Wong's popular Oahu brunch spot, serving traditional as well as fusion brunch fare. The hash browns are like nothing you've tried before, and the dumplings are equally delicious.
+                coords: [21.2816328,-157.8009142]
             -   title: Cowcow's Tea 🍔
                 image: cowcows.jpeg
                 coords: [21.282924,-157.7987858]
