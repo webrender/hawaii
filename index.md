@@ -223,6 +223,10 @@ maps:
             -   title: Hula Dog Kuhio 🍔🐶
                 description: A uniquely Hawaiian take on a hot dog.  We suggest the pineapple relish & lilikoi mustard!
                 coords: [21.2765022,-157.8230345]
+            -   title: Waikiki Leia 🍔🐶
+                description: This wedding venue turned restaurant serves delicious Japanese-inspired French cuisine on gorgeous outdoor grounds. 
+                image: waikikileia.jpeg
+                coords: [21.2695115,-157.8161865]
             -   title: Honolulu Zoo 
                 description: Honolulu's Zoo, which covers 42 acres and over 900 animals, including a petting zoo.  Great activity with kids, especially on a cloudy (but not rainy) day.
                 coords: [21.2687609,-157.822111]
@@ -529,6 +533,10 @@ maps:
             -   title: Fresh Catch Kaneohe 🍔
                 description: Local seafood deli with amazing poke and seafood dishes. Also sells beer to-go, a perfect place to stock up for a beach day on the windward shores. Also located in Honolulu and Aiea.
                 coords: [21.4171448,-157.8018799]
+            -   title: Haleiwa Joe's Haiku Gardens
+                description: This restaurant serves some delicious, contemporary American cuisine with island twists.  However, the real appeal is the stunning grounds on which the restaurant is located, which are also used as a wedding venue. No reservations, so arrive early. 
+                coords: [21.4144107,-157.8203104]
+                image: haleiwajoes.jpeg
             -   title: Byodo-In Temple
                 description: Beautiful Buddhist temple. Make sure to buy bird feed at the shop, the birds will eat straight from your hands! $5 admission.
                 coords: [21.430707,-157.832232]
