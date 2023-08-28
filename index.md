@@ -87,7 +87,7 @@ maps:
             -   title: Podmore 🍔
                 coords: [21.3074115,-157.8638265]
                 description: One of our absolute favorite date night spots.  With chef Anthony Rush of Senia at the helm, the food and drinks at this swanky upscale bar are excellent, but it's easier to get a reservation and a more relaxed atmosphere than it's big sibling. My favorite beverage is the Chung Chow, pictured above - a delight for all the senses.
-                image: podmore.jpeg
+                image: podmore.jpg
             -   title: Iolani Palace
                 coords: [21.3053178,-157.8581689]
                 description: Iolani is the only royal palace in the United States, and learning about its history is an essential part of respecting the culture and heritage of Hawai’i. Guided tours book extremely quickly, so reserve in advance.
@@ -1197,6 +1197,6 @@ maps:
                 image: kaenapoint.png
 ---
 # Aloha!
-## We hope our guide will give you a taste of O’ahu and the many wonderful activities in store for you on this island.  This guide is split into sections so you can see which activities are in the same vicinity. Click a map section to skip to that part of the guide.
+## We hope our guide will give you a taste of O’ahu and the many wonderful activities in store for you on this island.  This guide is split into sections so you can see which activities are in the same vicinity. <span class="screen-only">Click a map section to skip to that part of the guide.</span><span class="print-only">You can also view this guide online at <a href="https://webrender.net/oahuguide">https://webrender.net/oahuguide</a>.</span>
 
 #### 🍔 Food   🛍 Shopping   🏖 Beach   🐶 Dog-Friendly

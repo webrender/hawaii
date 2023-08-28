@@ -187,13 +187,21 @@ h3 {
         margin-right: 8px;
     }
 }
-
+.print-only {
+    display: none;
+}
 body.print {
     display: block;
     h1 {
         margin-block-start: 0;
     }
     header {
+        display: none;
+    }
+    .print-only {
+        display: inline;
+    }
+    .screen-only {
         display: none;
     }
     .map-wrap {
@@ -253,6 +261,10 @@ body.print {
     }
     .maplibregl-ctrl-attrib {
         background: none;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
     }
 }
 
