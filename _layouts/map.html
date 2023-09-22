@@ -9,7 +9,7 @@ layout: default
     <div class="overview-section">
       <div>{{ page.content | markdownify}}</div>
       <a id="print-button"
-        ><img src="./assets/img/print.svg" />Print this guide</a
+        ><img src="/assets/img/print.svg" />Print this guide</a
       >
       <div class="map-anchor" id="overview"></div>
     </div>
@@ -23,7 +23,7 @@ layout: default
       section[1].markers %}
       <div class="marker-item" id="{{marker.title}}">
         {% if marker.image %}
-        <img src="./assets/img/{{marker.image}}" class="marker-img" />
+        <img src="/assets/img/{{marker.image}}" class="marker-img" />
         {% endif %}
         <h3>
           <img

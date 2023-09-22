@@ -7,7 +7,7 @@
       {%- assign page_paths = site.header_pages | default: default_paths -%}
       <div class="before-title"></div>
       <div class="title">
-        <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+        <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}{% if page.title %} - {% endif %}{{ page.title }}</a>
       </div>
       <div class="after-title"></div>
       {%- if page_paths -%}
@@ -20,17 +20,6 @@
               </svg>
             </span>
           </label>
-  
-          <div class="trigger">
-            {%- for path in page_paths -%}
-              {% unless page.exclude %}
-                {%- assign my_page = site.pages | where: "path", path | first -%}
-                {%- if my_page.title -%}
-                <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-                {%- endif -%}
-              {% endunless %}
-            {%- endfor -%}
-          </div>
         </nav>
       {%- endif -%}
       <div class="after-nav"></div>
