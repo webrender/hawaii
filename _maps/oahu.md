@@ -60,13 +60,6 @@ maps:
             -   title: Liliha Bakery 🍔
                 description: Yummy bakery and restaurant. Great loco moco, great eclairs!
                 coords: [21.3133698,-157.8696]
-            -   title: Double Three Ice Cream 🍔
-                description:  If you've never had ice cream in a bubble waffle before, this is worth a try.  Waffles are made hot and fresh, there's a ton of delicious toppings to choose from, and the portions are huge. Second location in Kailua.
-                coords: [21.3216497,-157.8759548]
-                image: doublethree.png
-            -   title: Nami Kaze
-                description: Delicious sushi and fancy brunch at this japanese restaurant that gets fish right off the boats. Upscale, but not too pricey, a perfect spot for a celebration or just a lazy sunday morning.
-                coords: [21.3177375,-157.8807734]
             -   title: Chau's Fresh Fruit 🍔
                 description: The best pirri mangoes!
                 coords: [21.3146528,-157.8633347]
@@ -93,18 +86,16 @@ maps:
                 image: iolanipalace.jpeg
             -   title: H-Mart Kaka'ako 🍔
                 coords: [21.301080,-157.8595929]
-                description: Asian grocery store with lots of hard-to-find items.  Great food court on the 2nd floor!
+                description: Asian grocery store with lots of hard-to-find items. Food court on the 2nd floor!
             -   title: E.A.R.L. Sandwiches 🍔
                 coords: [21.2993384, -157.8612452]
-                description: Huge, amazing sandwiches.
+                description: Huge, amazing sandwiches. More locations in Honolulu and Kapolei
             -   title: SALT at Kaka'ako 🐶🍔🛍
                 coords: [21.2975837,-157.8629766]
                 description: |
                     Trendy shopping center in the heart of the Kaka'ako neighborhood.  Some of our favorite places include:
                     * Lanikai Juice: Delicious, fresh juices and smoothies
                     * ARVO: Third-wave coffee bar with extremely instagrammable beverages and food.
-                    * Butcher & Bird: Butcher shop that serves up sausages and burgers. The burger is one of the most delicious I've ever had in my entire life.
-                    * Hank's Haute Dogs: Hot dogs in every variant you could think of, in addition to burgers, sandwiches, and *amazing* fries.
                     * Highway Inn: Our favorite place for traditional Hawaiian food, served fresh and hot.  Try the pipikaula!
             -   title: Kaka'ako Murals 🐶🍔🛍
                 coords: [21.2986333,-157.8552307]
@@ -120,11 +111,8 @@ maps:
                 description: Delicious turkish food - their kebabs are amazing.  Upscale, but not too fancy, a great place to celebrate the end of your week.
                 coords: [21.294313,-157.8542309]
             -   title: Tali's Bagels & Shmears
-                description: Founded by an Oahu local and a New Yorker, Tali's has the best bagels on the island, boiled and made to New York standards. Their shmears, bialis, and israeli iced coffee are all excellent as well - just be prepared for a line, and get there early because they do sell out. 
+                description: Founded by an Oahu local and a New Yorker, Tali's has the best bagels on the island, boiled and made to New York standards. Their shmears, bialis, and israeli iced coffee are all excellent as well - just be prepared for a line, and get there early because they do sell out. They just won Rising Star at Bagelfest, an international bagel competition held in NYC.
                 coords: [21.2927457,-157.8553622]
-            -   title: Scratch Kitchen 🍔🐶
-                coords: [21.2933715,-157.8504644]
-                description: Eatery with great brunch and lunch items. Recommend their chicken and waffles, and milk & cereal pancakes, and grits. Dog-friendly patio.
             -   title: Purvé Donut Stop
                 coords: [21.2943841,-157.8498326]
                 description: Delicious, made-to-order donuts made right in front of you. A must for any donut afficionado. Second location at Kahala Mall.
@@ -136,11 +124,14 @@ maps:
                     * Foodland Farms: Expansive supermarket with lots of quick bites and local items, as well as a bar and small plates restaurant.
                     * Island Vintage Coffee: Great kona coffee as well as tasty acai bowls.  Try their Honey Latte! Also located in Hale’iwa.
                     * Jejubing Dessert Cafe: Shop serving korean-style shave ice, or bingsu - it has a snow-like consistency totally unlike typical shave ice and the toppings are delicious!
+            -   title: Hula Dog 🍔🐶
+                description: A uniquely Hawaiian take on a hot dog.  We suggest the pineapple relish & lilikoi mustard!
+                coords: [21.29131,-157.8379771]
             -   title: Sushi Murayama 🍔
                 coords: [21.2968215,-157.8424224]
                 description: One of Oahu’s top-rated sushi restaurants, known for their omakase.
-            -   title: "'Ili'Ili Cash & Carry 🍔"
-                description: Italian market with amazing pizzas, one of our two favorite pizzerias on the island.
+            -   title: "Mo'ili'ili Market 🍔"
+                description: Market that exclusively features local produce, meats, and dry goods. AMAZING store if you're looking to shop local. Also serves fresh pizza and sandwiches, one of our two favorite pizzerias on the island.
                 coords: [21.2959885,-157.8305068]
             -   title: Tane Vegan Izakaya 🍔
                 description: Possibly the best vegan japanese restaurant in the United States.  Their sushi are creative and delicious, you will have trouble believing there's no fish inside.
@@ -167,14 +158,14 @@ maps:
                 description: Fresh poke that gets people lined up around the block.  Good stop for lunch if you're headed to Manoa Falls!
                 coords: [21.3099589,-157.8102055]
             -   title: Morning Glass Coffee 🍔
-                description: Our favorite coffee shop on the entire island, with amazing beans plus delicious baked goods and lunch to go with it. 
+                description: One of our favorite coffee shops on the island, with amazing beans plus delicious baked goods and lunch to go with it. Their portuguese sausage fried rice omelette (also available in a vegetarian kimchi version) is incredible.
                 coords: [21.310275,-157.8070297]
             -   title: Prince Hotel 🍔🐶
                 coords: [21.2861501,-157.8411871]
                 description: | 
                     A wonderful hotel on the edge of Waikiki - great for people who want to be away from the bustling crowds but close enough to walk to everything in town.  Accepts dogs! Also home to two of our recommended restaurants:
                     * Katsumidori Sushi: Fun, upscale sushi restaurant, located next to the lobby.
-                    * 100 Sails: In our opinion, the best buffet experience in Hawaii, along with great sunset views.  Located on the 2nd floor.
+                    * 100 Sails: In our opinion, the best dinner buffet experience in Hawaii, along with great sunset views.  Located on the 2nd floor.
             -   title: Hilton Hawaiian Village Fireworks
                 coords: [21.2814946,-157.8436614]
                 description: What better to top off your trip than fireworks over the waters of Honolulu?  The Hilton Hawaiian Village's fireworks show starts at 8pm on the dot, Friday evenings.  I suggest watching across the bay from Kapiolani Park - check out Barefoot Beach Cafe further down this list for a perfect viewing spot. 
@@ -192,16 +183,12 @@ maps:
                     * Tim Ho Wan: Get your dim sum fix!
                     * Rock-A-Hula: Campy dinner theatre, featuring local & rock music, celebrity impersonators, and luau-style entertainment.
                     * Honolulu Cookie Company: Delicious shortbread cookies - buy some to take home, but make sure to get a box for your hotel room, too!
-            -   title: Waikiki Shopping Plaza Parking
-                description: |
-                    Located at 2250 Kalakaua Ave, this parking garage has affordable flat-rate parking for those looking to spend a day in Waikiki. 
-                    - $7.50 for 5 hours, $15 for 10 hours
-                    - Credit/Debit only
-                    - No overnight parking
-                coords: [21.2799398,-157.8286543]
             -   title: International Marketplace 🛍🍔
                 coords: [21.2780825, -157.8253942]
                 description: Another semi-outdoor mall in the middle of Waikiki.  Hula show on Mon/Wed/Fri @ 6:30.
+            -   title: Kono's Honolulu 🍔
+                coords: [21.2796864,-157.8306585]
+                description: Some of the best kalua pig on the island, this place is known for their kalua pig burritos and tasty milkshakes.  More locations in Kailua, and Hale'iwa.
             -   title: Azure 🍔
                 coords: [21.2762562,-157.8290451]
                 description: Located within the Royal Hawaiian hotel (an attraction in its own right), Azure is a fine-dining restaurant located right on the edge of Waikiki beach, currently serving a four course prix-fixe menu Fri-Sun. Reservations highly recommended. Can’t get in? Hit up the Mai Tai Bar next door, which is less fancy but with much better drop-in availability.
@@ -217,11 +204,8 @@ maps:
                 description: World-famous beach on the edge of Waikiki. Crowded, but a must-do for any visitor to Honolulu. Great place to find a surf bum to give you lessons!
                 coords: [21.2755059,-157.8258813]
             -   title: Waikiki Banyan Parking
-                description: The most affordable overnight parking in Waikiki at $30 a day or $150 a week, with in/out privleges. 
+                description: The most affordable overnight parking in Waikiki at $43 a day or $230 a week, with in/out privleges. 
                 coords: [21.2736534,-157.8284221]
-            -   title: Hula Dog Kuhio 🍔🐶
-                description: A uniquely Hawaiian take on a hot dog.  We suggest the pineapple relish & lilikoi mustard!
-                coords: [21.2765022,-157.8230345]
             -   title: Waikiki Leia 🍔🐶
                 description: This wedding venue turned restaurant serves delicious Japanese-inspired French cuisine on gorgeous outdoor grounds. 
                 image: waikikileia.jpeg
@@ -239,7 +223,7 @@ maps:
                 coords: [21.2679149,-157.8246587]
                 description: Small but packed aquarium featuring Hawaiian & tropical Pacific marine animals.  Located next to Kapiolani Beach Park. Great rainy day activity, especially with kids.
             -   title: Diamond Head
-                description: Arguably the most distinct element in Honolulu's skyline, Diamond Head towers over the rest of the city.  Take the relatively-easy 45 minute hike to the top for spectacular views of Honolulu, especially at sunset. Bring water, because there is very little shade on the path.
+                description: The most distinct element in Honolulu's skyline, Diamond Head towers over the rest of the city.  Take the relatively-easy 45 minute hike to the top for spectacular views of Honolulu, especially at sunset. Bring water, because there is very little shade on the path.
                 coords: [21.2596925,-157.8142678]
             -   title: Diamond Head Market & Grill
                 description: One of the best plate lunch spots in town. Perfect place to stop for lunch or dinner on your way to Diamond Head, or if you're headed out of town for the day. Probably my favorite mac salad on the whole island..
@@ -248,9 +232,6 @@ maps:
                 description: Do you like tonkatsu? Because if so, this may well be THE BEST KATSU IN YOUR ENTIRE LIFE. Although the premises are unassuming, the lines and 3 month reservation wait should be an indication that you're in for something special. There's several types of katsu to choose from, you make and customize your own sauce at the table, and there's endless servings of the most finely-shredded lettuce you've ever seen. If you don't have the time to make a reservation 2 months in advance, you have two options - 1) try calling right when they open to check for cancellations, and they will often be able to squeeze you in, or 2) line up 30min before they open and you'll usually be able to get a table pretty quickly.
                 image: tamafuji.jpg
                 coords: [21.274965,-157.8179854] 
-            -   title: Kono's Honolulu 🍔
-                coords: [21.2852889,-157.8155042]
-                description: Some of the best kalua pig on the island, this place is known for their kalua pig burritos and tasty milkshakes.  More locations in Waikiki, Kailua, and Hale'iwa.
             -   title: Leonard's Bakery 🍔
                 coords: [21.2848821,-157.8133419]
                 description: The famous bakery known for their malasadas, a local donut-like treat. A must-do! There are also Leonards Malasadamobiles (food trucks) located around the island, but the original location is the best.
@@ -267,8 +248,8 @@ maps:
             -   title: Miro Kaimuki
                 coords: [21.2846862,-157.8073557]
                 description: For a fancy night out, check out this modern french bistro featuring Japanese-inspired prix-fixe gastronomic tours as well as guest chefs. One of the hottest new fine dining spots in Honolulu.
-            -   title: XO & AV Restaurants 🍔
-                description: AV stands for "All Vegan", but you wouldn't know it looking at many of AV Restaurant's 13-16 course menu. A culinary delight for vegans and non-vegans alike.  $99 per person, not including tax/tip or sake pairings. XO, right down the road and owned/operated by the same folks, serves delicious izakaya-style plates that change on a weekly basis.
+            -   title: XO Restaurant 🍔
+                description: XO serves delicious izakaya-style plates that change on a weekly basis.
                 image: avrestaurant.jpg
                 coords: [21.2825452,-157.800158]
             -   title: Koko Head Cafe 🍔🐶
@@ -278,8 +259,8 @@ maps:
                 image: cowcows.jpeg
                 coords: [21.282924,-157.7987858]
                 description: Our favorite boba shop - try their purple rice yogurt drinks, SO GOOD!
-            -   title: Chubbies Burgers 🍔
-                coords: [21.2820541,-157.7988725]
+            -   title: Boarded Up 🍔
+                coords: [21.2812653,-157.8046918]
                 description: Best burgers in town, made "smash burger" style. Closest thing you can get to In-n-Out in Hawaii, especially with a side of Chub Fries. Their shakes are also legit.
             -   title: The Surfing Pig 🍔
                 coords: [21.281106,-157.7969974]
@@ -487,7 +468,7 @@ maps:
                 coords: [21.2823969,-157.67703]
                 description: Geysers of seawater shoot as high as 30 feet through this lava tube, located in a scenic cove.
             -   title: Sandy Beach 🏖
-                description: Popular beach for bodyboarding and bodysurfing. A local favorite, can get crowded on the weekends. Great place to watch sunrise.
+                description: Popular local beach, can get crowded on the weekends. Great place to watch sunrise. Do NOT underestimate the surf here, it is a deep shorebreak and only for experienced swimmers. The lifeguards here WILL tell you to get out of the water if they feel you're not prepared, earning it the slogan "Safer beaches down da road".
                 coords: [21.286293,-157.6693121]
             -   title: Makapu'u Point Lighthouse Trail 🏖
                 coords: [21.308778,-157.6504453]
@@ -512,12 +493,10 @@ maps:
             -   title: Easy 'Que 🐶🍔
                 description: BBQ restaurant in Kailua with refreshing outdoor misters, and a good bar selection to boot.
                 coords: [21.3931151,-157.7476225]
-            -   title: The Beet Box Cafe 🍔
-                description: Tasty vegetarian and vegan cuisine, serving a wide variety of breakfast and lunch items, as well as juices. There's a second location in Hale'iwa on the north shore, as well.
-                coords: [21.3970908,-157.7380278]
-            -   title: Taqueria El Gallo Rosa 🐶🍔
-                description: Delicious Mexican restaurant, with handmade tortillas and vegan options.  Their fish tacos & chips and guac are amazing!
-                coords: [21.3928551,-157.7461885]
+            -   title: Double Three Ice Cream 🍔
+                description:  If you've never had ice cream in a bubble waffle before, this is worth a try.  Waffles are made hot and fresh, there's a ton of delicious toppings to choose from, and the portions are huge. Second location in Kailua.
+                coords: [21.357654,-157.808892]
+                image: doublethree.png
             -   title: R. Field Wine Co. 🍔
                 description: Located within Foodland Kailua, this is probably the best place on the island to find ingredients for an amazing charcuterie plate.  Great wine selection as well.
                 coords: [21.3863184,-157.7391674]
@@ -727,10 +706,6 @@ maps:
                     
                     That being said - the PCC is owned and operated by the LDS (Mormon) Church and the experiences, while entertaining, do not touch on the colonist history and struggle of these peoples. IMO this is a great place to visit if you're looking for a "Polynesian Disneyland" - if you are interested in the history of Polynesian culture, I strongly recommend a guided tour of Iolani Palace, an authentic Native Hawaiian-run luau such as Toa or Nutridge, and volunteering on the island in activities that benefit Native Hawaiians, such as the restoration of Hawaiian fishponds. If you *do* visit the PCC, be aware that the "free tram tour" is a thinly-veiled advertisement for the LDS and Brigham Young University, located next door.
                 coords: [21.6405116,-157.9235388]
-            -   title: Kahuku Superette 🍔
-                description: The sign on top of this convenience store in Kahuku says it all - best poke bowl! Several different kinds, but the limu is our favorite. 
-                image: kahukusuperette.png
-                coords: [21.6751298,-157.9441273]
             -   title: Kahuku Sugar Mill 🍔
                 description: |
                     This food truck spot has over 20 different trucks for you to sample, and is the center of the town of Kahuku.  Some of our favorites:
@@ -738,6 +713,9 @@ maps:
                     * Giovanni's Shrimp: The most famous north shore shrimp truck of all.
                     * Mike's Huli Huli Chicken: Delicious, slow roasted rotisserie chicken.
                     * Raised by the Waves: Tasty vegan dishes.
+                    * Da Bald Guy: Famous plate lunches.
+                    * Ry's Poke Shack: This took the crown from Kahuku Superette next door for the best poke bowls on the north shore. International travelers have been known to make the trek up to Kahuku just for their poke!
+                    * The Country Eatery: Tucked away in the back of the complex, this breakfast spot has some of the best coffee on the north shore and great, healthy breakfast.
                 coords: [21.6782946,-157.952197]
             -   title: Fumi's Kahuku Shrimp
                 description: Giovanni's may be the most well-known, but Fumi's is our favorite stop for north shore shrimp. Whether it be here or one of the other venues, garlic shrimp should be a must-try on your north shore journey!
@@ -763,8 +741,11 @@ maps:
                 image: sunsetbeach.jpeg
                 description: Picturesque beach known for big wave surfing and, of course, sunsets.
                 coords: [21.6738721,-158.0407887]
+            -   title: Lucky's 🍔
+                coords: [21.6677939,-158.0564909]
+                description: This shack serves great coffee (a rarity on the north shore) and delicious breakfast burritos.  Definitely worth a stop if you're headed to Sunset Beach.
             -   title: Shark's Cove 🏖
-                description: A rocky cove with tide pools perfect for snorkeling or just wading. Restrooms and lots of food stands across the street.
+                description: A rocky cove with tide pools perfect for snorkeling or just wading. Restrooms and lots of food stands across the street. There's also a Foodland across the street, grab some supplies and have a picnic!
                 coords: [21.6499775,-158.0628227]
             -   title: Waimea Bay 🏖🐶
                 description: One of the most beautiful beaches in Hawaii, perhaps the world. Famous for 30 foot waves in the winter and a rock for jumping when waters are calmer. Come early, parking fills up fast.
@@ -780,8 +761,8 @@ maps:
             -   title: Hale’iwa Beach Park 🐶🏖
                 description: This park is at the edge of the town of Hale’iwa, and the perfect spot to enjoy the sunset over some beers and a BBQ, or to look for some surfing lessons.
                 coords: [21.5986028,-158.1031735]
-            -   title: Hale’iwa Bowls 🍔
-                description: The north shore is famous for its acai bowls, and Hale’iwa Bowls is the place to get the best, with delicious locally-sourced ingredients.
+            -   title: Hale’iwa Bowls & Saylor's 🍔
+                description: The north shore is famous for its acai bowls, and Hale’iwa Bowls is the place to get the best, with delicious locally-sourced ingredients. Saylor's its next door neighbor, has some great coffee and pastries as well.
                 coords: [21.5903953,-158.1056307]
             -   title: Sweet As 🍔
                 coords: [21.5943845,-158.105344]
@@ -790,9 +771,6 @@ maps:
                 description: A famous north shore destination for shave ice, a Hawaii specialty. Make sure to try the ichiban special - shaved ice with your choice of up to 3 syrups, topped with condensed milk, vanilla ice cream, sweet azuki beans, and mochi balls - and served in an edible bowl!
                 image: matsumotos.png
                 coords: [21.5903124,-158.0995947]
-            -   title: Coffee Gallery 🍔
-                description: The best hand-roasted coffee on the north shore, as well as fresh-baked goods. Their Crown Jewel drink is our favorite!
-                coords: [21.5858029,-158.0999873]
             -   title: Farm to Barn 🍔🐶
                 description: Cute restaurant with fresh, locally sourced breakfast and lunch and plenty of outdoor seating.  Delicious fresh juices as well, and their burger is one of our favorites on the island. Free yoga classes Monday-Thursday @ 5:30pm.
                 coords: [21.5839701,-158.1043699]
@@ -1017,11 +995,8 @@ maps:
                 description: Tasty cafe with coffee grown on site, as well as pastries and shopping. Outdoor seating area that is kid and dog friendly.
             -   title: Shige’s Saimin Stand 🍔
                 coords: [21.4970803,-158.0307004]
-                description: Saimin is Hawaii’s version of ramen, and Shige’s is the saimin spot that locals swear by, featuring homemade noodles. Definitely be sure to get a teri beef stick with your order.
+                description: Saimin is Hawaii’s version of ramen, and Shige’s is the saimin spot that locals swear by, featuring homemade noodles. Definitely be sure to get a teri beef stick with your order. Shige's also won the best burger in the US on Yelp in 2024, so their BBQ burger is not to be missed.
                 image: shigessaimin.png
-            -   title: Black Sheep Cream 🍔
-                description: Our favorite ice cream shop - their affogatos (espresso on top of ice cream) are amazing! Also located in Waipio and Kaka’ako.
-                coords: [21.4915722,-158.0321015]
             -   title: Taqueria El Ranchero 🍔
                 description: One of the best, most authentic Mexican restaurants on the island. Delicious carne asada and salsas, rivals what you'd find in the Mission District of San Francisco. Take out section, as well as a fun cantina area serving drinks. Gets busy in the evenings with folks from the nearby military base.
                 coords: [21.4974295,-158.0250304]
@@ -1057,12 +1032,14 @@ maps:
                     If there's one thing that can be said about McDonalds, it's that you know exactly what you're going to get here. However, you may not know about these McD's Hawaii-only items:
                     * Fried pies (the rest of the country serves baked pies now), in Taro and Haupia (coconut) in addition to the normal apple
                     * Spam & portuguese sausage breakfast with rice
-                    * Saimin (ask for it, not available at all locations)
                     * Hawaiian Punch
                     * McTeri (seasonal item)
+            -   title: Black Sheep Cream 🍔
+                description: Our favorite ice cream shop - their affogatos (espresso on top of ice cream) are amazing!
+                coords: [21.5942172,-158.4080219]
             -   title: Beer Lab HI 🍔
-                coords: [21.3579638,-157.9138133]
-                description: Local taproom with lots of tasty beers and ciders. Has a rotating kitchen featuring local food truck cuisine.
+                coords: [21.3850714,-158.0570144]
+                description: Located in Pearlridge Mall, a local taproom with lots of tasty beers and ciders. Has a rotating kitchen featuring local food truck cuisine.
             -   title: Pearl Harbor National Memorial
                 coords: [21.3631224,-157.9392014]
                 description: Memorial for the USS Arizona, a warship sunk during the attack on Pearl Harbor.  The memorial is located directly over the sunken ship, accessed via boat.  Also features a museum with lots of history about the base. Free admission, but pre-purchasing tickets online is recommended as there are a limited amount daily.
@@ -1177,6 +1154,7 @@ maps:
                     * Mina's Fish House
                     * Eggs 'n Things
                     * Paradise Cove Luau
+                    * Farm to Barn
             -   title: Ko Olina Lagoons 🏖
                 coords: [21.3347603,-158.1195735]
                 description: Four Public lagoons located in the Ko Olina complex, featuring white sand and shallow waters. One of the better places on Oahu to spot seals and sea turtles. Public parking available but *extremely limited* so get here early if you're planning a trip.
