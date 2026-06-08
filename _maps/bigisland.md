@@ -73,9 +73,11 @@ maps:
       - title: "7-Eleven Kurtistown"
         coords: [19.60005656505304, -155.04347342455955]
         description: "Good place for pork hash and coffee on the way to VNP."
+        image: 7elevenkurtistown.jpg
       - title: "Volcano House"
         coords: [19.428796959249247, -155.2589518350022]
         description: "First stop at VNP. Have a look at any activity from the lobby."
+        image: volcanohouse.webp
   South Hilo:
     polygonColor: "rgb(100,181,246)"
     polygonCoords:
@@ -132,6 +134,7 @@ maps:
       - title: "2 Ladies Bakery"
         coords: [19.721300946818026, -155.08394749712983]
         description: "Hilo. They make Japanese sweets mostly. Usually a line out the door."
+        image: 2ladies.jpg
         links:
           - https://www.facebook.com/twoladieskitchenorginal/
       - title: "Locavore Grocery"
@@ -195,6 +198,7 @@ maps:
       - title: "Our Founding Farmers"
         coords: [20.23853827666617, -155.83103167102112]
         description: "Way up in Hawi. Outstanding hand-made ice cream."
+        image: foundingfarmers.webp
   South Kohala:
     polygonColor: "rgb(30,136,229)"
     polygonCoords:
@@ -272,6 +276,7 @@ maps:
       - title: "Waimea Butcher Shop"
         coords: [20.025660141891972, -155.65931748626193]
         description: "Combination restaurant and meat market -- the best meat market on the Big Island (no real competition). Salami, cured ham, sausages, bacon and similar."
+        image: waimeabutcher.webp
         links:
           - http://www.waimeabutchershop.com/
       - title: "Foodland Waimea"
@@ -362,6 +367,7 @@ maps:
       - title: "Big Island Abalone"
         coords: [19.714609753480204, -156.0440929067997]
         description: "The food truck is closed -- you will need access to a kitchen in order to enjoy Big Island Abalone. This should be #1 on any foodie's list, because these Japanese salt-water snails are nearly extinct in the wild. The only way to get these is to visit Big Island. Locals don't know about this farm. Most tourists don't, either. But Japanese visitors know -- you will see them every single day, eating abalone sashimi and garlic abalone stew like they just hit the lottery."
+        image: bigislandabalone.webp
       - title: "Broke da Mouth Grindz"
         coords: [19.64887926699563, -155.99988073797448]
         description: "Famous for Garlic Furikake Chicken. Near the breweries in the industrial section of Kailua. They make a pork belly dish which is also excellent. Their kalua pig uses liquid smoke, though, so stay away from that."
@@ -460,6 +466,7 @@ maps:
       - title: "Shaka Tacos"
         coords: [19.489827123267215, -155.91118968180896]
         description: "Captain Cook. Outstanding venison burritos from an island I cannot name. Eat as much venison as you want -- it's helping control the invasive axis deer. You're doing two islands a favor every time you ask for Hawaii venison. Maui is one. Can't say the other."
+        image: shakatacos.webp
         links:
           - https://shakatacoz.com/
       - title: "Sunday Farmer's Market in Captain Cook"

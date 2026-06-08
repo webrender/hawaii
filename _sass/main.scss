@@ -171,6 +171,19 @@ h3 {
     margin-bottom: 20px;
 }
 
+.marker-link {
+    display: inline-block;
+    margin-left: 6px;
+    vertical-align: middle;
+    img {
+        vertical-align: middle;
+        opacity: 0.6;
+    }
+    &:hover img {
+        opacity: 1;
+    }
+}
+
 #print-button {
     display: inline-block;
     position: relative;
