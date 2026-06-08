@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -18,12 +18,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Webrender's Guide to Hawai'i
+title: r/VisitingHawaii Guides
 email: webrender@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   A local's guide to the island of Oahu.
 url: "https://hawaii.webrender.net" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  webrender
+github_username: webrender
 
 # Build settings
 theme: minima
@@ -34,7 +34,7 @@ paginate: 5
 paginate_path: "/maps/page:num/"
 kramdown:
   hard_wrap: true
-collections: 
+collections:
   maps:
     output: true
     permalink: /:collection/:title
