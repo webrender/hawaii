@@ -495,6 +495,8 @@ maps:
           - https://www.facebook.com/SuperJsLaulau/
 ---
 
-# Aloha!
+# r/VisitingHawaii Big Island Guide
+
+Written by [u/MonkeyKingCoffee](https://reddit.com/u/MonkeyKingCoffee)
 
 ## A local's guide to eating well on the Big Island -- restaurants, farmers' markets, and groceries. Regions follow the Hawaii County TMK zones. <span class="screen-only">Click a map section to skip to that part of the guide.</span>

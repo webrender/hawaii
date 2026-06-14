@@ -22,16 +22,13 @@ layout: default
       markdownify}} {% endif %} {% if section[1].markers %} {% for marker in
       section[1].markers %}
       <div class="marker-item" id="{{marker.title}}">
-        {% if marker.image %}
-        <img src="/assets/img/{{marker.image}}" class="marker-img" />
-        {% endif %}
         <h3>
           <img
             src="https://mt.google.com/vt/icon/name=icons/onion/SHARED-mymaps-container-bg_4x.png,icons/onion/SHARED-mymaps-container_4x.png,icons/onion/1738-blank-sequence_4x.png&highlight=ff000000,{{section[1].markerColor}},ff000000&scale=2.0&color=ffffffff&psize=15&text={{forloop.index}}&font=fonts/Roboto-Medium.ttf"
             width="30"
           />
-          {{ marker.title }}
-          {% if marker.links %} {% for link in marker.links %}
+          {{ marker.title }} {% if marker.links %} {% for link in marker.links
+          %}
           <a
             href="{{ link }}"
             target="_blank"
@@ -42,7 +39,9 @@ layout: default
           /></a>
           {% endfor %} {% endif %}
         </h3>
-        {{ marker.description | markdownify }}
+        {{ marker.description | markdownify }} {% if marker.image %}
+        <img src="/assets/img/{{marker.image}}" class="marker-img" />
+        {% endif %}
       </div>
       {% endfor %} {% endif %}
     </div>
@@ -119,7 +118,7 @@ layout: default
                     maps[container].resize()
                 });
               });
-              resizer.observe(document.getElementById(container)); 
+              resizer.observe(document.getElementById(container));
               if (!printView) {
                   maps[container].addControl(new maplibregl.NavigationControl());
               }
