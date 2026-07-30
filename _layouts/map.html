@@ -102,7 +102,7 @@ layout: default
           if (!maps[container] || printView) {
               maps[container] = new maplibregl.Map({
                   container,
-                  style: 'https://tileserver.webrender.net/api/maps/bright/style.json', // stylesheet location
+                  style: 'https://tiles.openfreemap.org/styles/bright', // stylesheet location
                   center: [-157.964, 20.666], // starting position [lng, lat]
                   zoom: 7 // starting zoom
               });
