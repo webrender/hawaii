@@ -35,59 +35,43 @@ maps:
         lng: -156.5300
     markerColor: 0288D1
     markers:
-      - title: Kahului Airport
+      - title: Kahului Airport ✈️
         coords: [20.8986, -156.4305]
         description: |
-          Main arrival point for Maui. Most visitors pick up rental cars here before heading to South Maui, West Maui, Upcountry, or the Road to HÄna.
+          Main arrival point for Maui. Most visitors pick up rental cars here before heading to South Maui, West Maui, Upcountry, or the Road to Hāna.
       - title: Kahului
         coords: [20.8893, -156.4729]
         description: |
-          Mauiâ€™s main retail and services hub, with grocery stores, big-box stores, rental car access, and practical trip supplies.
-      - title: Tin Roof Maui ðŸ”
-        coords: [20.8831, -156.4588]
-        description: |
-          Casual counter-service spot from chef Sheldon Simeon serving local-style bowls and comfort food. It is close to the airport and works well as a first or last meal on Maui.
-      - title: Tasaka Guri-Guri ðŸ”
-        coords: [20.8883, -156.4776]
-        description: |
-          Long-running Maui institution inside Maui Mall Village serving guri-guri, a cold local dessert similar to sherbet. Cash only.
-      - title: Foodland Farms Kaahumanu ðŸ”ðŸ›
-        coords: [20.8888, -156.4758]
-        description: |
-          Convenient grocery stop for poke, prepared food, snacks, drinks, and beach supplies after leaving the airport.
+          Maui’s main retail and services hub, with grocery stores, big-box stores, rental car access, and practical trip supplies.
       - title: Wailuku
         coords: [20.8911, -156.5047]
         description: |
-          Historic county seat near Ê»Äªao Valley. Good base for exploring Central Maui and the West Maui Mountains.
-      - title: Bailey House / Hale HÅÊ»ikeÊ»ike
-        coords: [20.8858, -156.5069]
-        description: |
-          Small museum in Wailuku focused on Maui history and Hawaiian culture, with exhibits, artifacts, and historic grounds.
-      - title: Kepaniwai Park & Heritage Gardens
-        coords: [20.8830, -156.5270]
-        description: |
-          Public gardens in Ê»Äªao Valley recognizing the cultures of many communities that shaped modern Maui. A pleasant stop to combine with Ê»Äªao Valley.
-      - title: Ê»Äªao Valley State Monument
+          Historic county seat near ʻĪao Valley. Good base for exploring Central Maui and the West Maui Mountains.
+      - title: ʻĪao Valley State Monument
         coords: [20.8819, -156.5453]
         image: iaovalley.jpg
         description: |
-          Lush valley with short scenic walks and views of the Ê»Äªao Needle. Reservations may be required for non-residents.
+          Lush valley with short scenic walks and views of the ʻĪao Needle. Reservations may be required for non-residents.
       - title: Maui Ocean Center
         coords: [20.7919, -156.5137]
         description: |
-          Aquarium in MÄÊ»alaea focused on Hawaiian marine life. A good rainy-day or family-friendly activity.
-      - title: KeÄlia Pond National Wildlife Refuge
-        coords: [20.7952, -156.4787]
-        description: |
-          Coastal wetland and boardwalk where visitors may see Hawaiian stilts, coots, and other birds. Admission is free; bring sun protection and binoculars if you have them.
-      - title: MÄÊ»alaea Harbor
+          Aquarium in Māʻalaea focused on Hawaiian marine life. A good rainy-day or family-friendly activity.
+      - title: Māʻalaea Harbor
         coords: [20.7902, -156.5130]
         description: |
-          Departure point for many snorkeling, whale-watching, and ocean tours.
-      - title: Maui Tropical Plantation
-        coords: [20.8461, -156.5150]
-        description: |
-          Landscaped plantation grounds with tropical plants, a restaurant, shops, and paid activities. The grounds are an easy, low-key stop in Central Maui.
+          Departure point for many whale-watching, sailing, and ocean tours. If snorkeling is your priority, consider a smaller tour that visits less-crowded coastal sites instead of Molokini.
+      - title: Tin Roof Maui 🍔
+        coords: [20.8898, -156.4531]
+        description: Popular local takeout spot near the airport from chef Sheldon Simeon. The mochiko chicken and garlic noodles travel well, but expect a line at lunch.
+      - title: Tasaka Guri-Guri 🍔
+        coords: [20.8874, -156.4755]
+        description: A Maui institution serving its signature frozen pineapple-and-strawberry dessert inside Maui Mall Village.
+      - title: Maui Swap Meet 🛍
+        coords: [20.8917, -156.4792]
+        description: Saturday market with local produce, prepared food, crafts, clothing, and souvenirs. Go early for cooler temperatures and the best selection.
+      - title: Maui Tropical Plantation 🍔🛍
+        coords: [20.8484, -156.5070]
+        description: Landscaped plantation property with gardens, a farm stand, shopping, and dining. Admission to the grounds is generally free; paid activities are optional.
 
   South Maui:
     polygonColor: "rgb(67,160,71)"
@@ -118,55 +102,46 @@ maps:
         lng: -156.4800
     markerColor: 43A047
     markers:
-      - title: KÄ«hei
+      - title: Kīhei 🍔🛍
         coords: [20.7644, -156.4450]
         description: |
-          Sunny, casual South Maui beach town with condos, restaurants, beginner surf lessons, and easy access to KamaÊ»ole beaches.
-      - title: Kihei Caffe ðŸ”
-        coords: [20.7304, -156.4523]
-        description: |
-          Popular casual breakfast spot known for large portions and local-style favorites. Lines can build, so arrive early.
-      - title: South Maui Fish Company ðŸ”
-        coords: [20.7498, -156.4564]
-        description: |
-          Food truck serving fresh fish plates, tacos, and poke. Hours and availability can vary when the day's catch sells out.
-      - title: Maui Brewing Company Kihei ðŸ”
-        coords: [20.7494, -156.4378]
-        description: |
-          Maui brewery with a large open-air restaurant, locally brewed beer, food, and frequent live entertainment.
-      - title: KamaÊ»ole Beach Parks
+          Sunny, casual South Maui beach town with condos, restaurants, beginner surf lessons, and easy access to Kamaʻole beaches.
+      - title: Kamaʻole Beach Parks 🏖
         coords: [20.7175, -156.4462]
         description: |
           Popular series of South Maui beaches for swimming, sunset, snorkeling, and family beach days.
-      - title: Keawakapu Beach
-        coords: [20.7048, -156.4462]
-        description: |
-          Long sandy beach between KÄ«hei and Wailea. It is popular for morning walks, swimming when calm, and sunset, with several public access points.
-      - title: Wailea Beach
+      - title: Wailea Beach 🏖
         coords: [20.6934, -156.4429]
         description: |
           Resort-area beach with calm conditions when weather cooperates, good facilities nearby, and excellent sunset views.
-      - title: Wailea Beach Path
-        coords: [20.6856, -156.4425]
-        description: |
-          Paved coastal path connecting Wailea's resorts and several public beach-access points. Good for an easy morning or sunset walk.
-      - title: The Shops at Wailea ðŸ”ðŸ›
-        coords: [20.6879, -156.4399]
-        description: |
-          Open-air shopping center with restaurants, galleries, convenience options, and regular cultural programming in the Wailea resort area.
-      - title: MÄkena Beach / Big Beach
+      - title: Mākena Beach / Big Beach 🏖
         coords: [20.6316, -156.4456]
         description: |
-          Large, scenic beach in South Maui. The shorebreak can be extremely powerful and cause serious injuries, even when the water looks inviting. Ask the lifeguards about conditions and stay out when warnings are posted.
-      - title: Ê»Ä€hihi-KÄ«naÊ»u Natural Area Reserve
+          Large, scenic beach in South Maui. Beautiful, but use caution: the shorebreak can be powerful.
+      - title: ʻĀhihi-Kīnaʻu Natural Area Reserve 🏖
         coords: [20.6130, -156.4380]
         description: |
-          Protected coastal reserve with clear water and lava-rock shoreline. Use only designated parking and entry areas, do not walk on coral, and check current access rules and ocean conditions before visiting.
-      - title: Molokini Crater
+          Protected coastal reserve known for snorkeling and lava-rock shoreline. Check current access rules before visiting.
+      - title: Molokini Crater (Not Recommended)
         coords: [20.6319, -156.4969]
         image: molokini.jpg
         description: |
-          Heavily visited offshore crater reached only by boat tour. We generally do not recommend Molokini for snorkeling: tours are expensive, the site can be crowded, and Maui has excellent shore snorkeling that avoids an additional boat trip and pressure on the crater. Strong swimmers and divers may value the clear, deep water, but should choose a responsible operator.
+          We do not recommend Molokini snorkeling tours. The crater receives heavy daily boat traffic, and research found that reef-fish biomass increased when tourism stopped and quickly declined when visitors returned. A Molokini trip is also expensive and takes much of a day when Maui has excellent shore and coastal snorkeling alternatives. Read the [University of Hawaiʻi summary of the study](https://www.hawaii.edu/news/2023/04/13/visitors-to-molokini-maui/){:target="_blank"}.
+      - title: Keawakapu Beach 🏖
+        coords: [20.7049, -156.4458]
+        description: Long beach between Kīhei and Wailea with several public access points. Good for walking and swimming when conditions are calm.
+      - title: Ulua Beach 🏖
+        coords: [20.6970, -156.4430]
+        description: Wailea beach with a reef near the north end that can offer accessible shore snorkeling in calm morning conditions. Parking fills early.
+      - title: South Maui Fish Company 🍔
+        coords: [20.7279, -156.4498]
+        description: Casual food truck known for fresh fish plates, tacos, and poke. It can sell out, so check its current hours before heading over.
+      - title: Monkeypod Kitchen Wailea 🍔
+        coords: [20.6877, -156.4403]
+        description: Lively Hawaiʻi regional restaurant known for local ingredients, cream pies, and mai tais topped with honey-lilikoi foam. Reservations are useful.
+      - title: The Shops at Wailea 🍔🛍
+        coords: [20.6868, -156.4401]
+        description: Open-air resort shopping center with restaurants, galleries, boutiques, and occasional cultural programming.
 
   West Maui:
     polygonColor: "rgb(251,140,0)"
@@ -210,64 +185,44 @@ maps:
       - title: Lahaina
         coords: [20.8783, -156.6825]
         description: |
-          Historic West Maui town devastated by the August 2023 wildfire. Much of greater Lahaina and West Maui is open again, and local businesses welcome respectful visitors, but the central burn zone remains a recovering residential community rather than a sightseeing attraction. Follow closures, do not photograph residents or damaged property, and support locally owned businesses.
-      - title: Mala Ocean Tavern ðŸ”
-        coords: [20.8848, -156.6869]
-        description: |
-          Oceanfront Lahaina restaurant serving brunch and dinner. One of the local businesses operating again after the fire; reservations are recommended.
-      - title: Aloha Mixed Plate ðŸ”
-        coords: [20.8852, -156.6868]
-        description: |
-          Casual waterfront restaurant serving local-style plate lunches and Hawaiian favorites. Check current hours and reserve ahead during busy periods.
-      - title: Old LÄhainÄ LÅ«Ê»au
+          Lahaina is gradually reopening following the August 2023 wildfire. The harbor area and portions of the historic district have reopened for daytime access, and Front Street is scheduled to reopen more broadly on August 1, 2026. Rebuilding remains active, so stay out of fenced and private areas, support open local businesses, and check the [County of Maui recovery updates](https://www.mauicounty.gov/2891/Maui-Wildfire-Disaster-Recovery){:target="_blank"} before visiting.
+      - title: Old Lāhainā Lūʻau
         coords: [20.8842, -156.6868]
         image: oldlahaina.png
         description: |
-          Well-known Hawaiian lÅ«Ê»au experience in West Maui. Book early and confirm current operating status.
-      - title: KÄÊ»anapali Beach
+          Well-known Hawaiian lūʻau experience in West Maui. Book early and confirm current operating status.
+      - title: Kāʻanapali Beach 🏖
         coords: [20.9174, -156.6964]
         description: |
           Major West Maui resort beach with swimming, snorkeling near Black Rock, sunset views, and many hotel/restaurant options.
-      - title: KÄÊ»anapali Beachwalk
-        coords: [20.9220, -156.6964]
-        description: |
-          Paved oceanfront path connecting KÄÊ»anapali's resorts, restaurants, Whalers Village, and public beach-access points.
-      - title: Whalers Village ðŸ”ðŸ›
-        coords: [20.9212, -156.6955]
-        description: |
-          Open-air shopping and dining center on KÄÊ»anapali Beach. It also houses a small museum and provides validated parking with participating businesses.
-      - title: Black Rock / PuÊ»u KekaÊ»a
-        coords: [20.9278, -156.6962]
-        description: |
-          Prominent lava-rock point at the north end of KÄÊ»anapali Beach with cultural significance and popular snorkeling. Currents can be strong around the point; enter only in calm conditions and never jump from the rock.
-      - title: NÄpili Bay
+      - title: Nāpili Bay 🏖
         coords: [20.9946, -156.6674]
         description: |
           Smaller West Maui beach area known for swimming, snorkeling, and a relaxed vacation feel.
-      - title: The Gazebo ðŸ”
-        coords: [20.9958, -156.6667]
-        description: |
-          Small oceanfront breakfast restaurant at NÄpili Shores, best known for pancakes and fried rice. Expect a line and little shade while waiting.
       - title: Kapalua Coastal Trail
         coords: [21.0017, -156.6650]
         description: |
           Easy scenic coastal walk connecting beaches, lava shoreline, resort areas, and ocean views.
-      - title: Kapalua Bay
-        coords: [21.0013, -156.6664]
-        description: |
-          Sheltered crescent beach popular for swimming and snorkeling when conditions are calm. Parking is limited, so arrive early and do not leave valuables in the car.
-      - title: DT Fleming Beach Park
-        coords: [21.0092, -156.6517]
-        description: |
-          Broad, lifeguarded West Maui beach with picnic facilities and shade. Winter surf can be rough, so follow lifeguard instructions.
-      - title: Honolua Bay
+      - title: Honolua Bay 🏖
         coords: [21.0138, -156.6393]
         description: |
           Famous snorkeling and surf spot in northwest Maui. Conditions vary seasonally; avoid entering during high surf.
       - title: Nakalele Blowhole
         coords: [21.0271, -156.5906]
         description: |
-          Rugged coastal blowhole area reached by an uneven, exposed walk. Stay well back from both the opening and the ocean edge; people have been seriously injured and killed after getting too close.
+          Rugged coastal blowhole area. Stay well back from the blowhole and ocean edge; people have been seriously injured and killed here.
+      - title: Leoda’s Kitchen and Pie Shop 🍔
+        coords: [20.8108, -156.6220]
+        description: Casual Olowalu stop known for sandwiches, savory pies, and small dessert pies. A convenient break on the drive between Central and West Maui.
+      - title: Whalers Village 🍔🛍
+        coords: [20.9213, -156.6947]
+        description: Beachfront shopping and dining center in Kāʻanapali with validated parking, cultural activities, and easy access to the beachwalk.
+      - title: The Gazebo 🍔
+        coords: [20.9970, -156.6663]
+        description: Small oceanfront breakfast restaurant at Napili Shores, best known for pancakes and fried rice. It does not take reservations and lines form early.
+      - title: D.T. Fleming Beach Park 🏖
+        coords: [21.0050, -156.6516]
+        description: Broad Kapalua-area beach with lifeguards, restrooms, picnic tables, and shade. Winter surf can be strong.
 
   North Shore:
     polygonColor: "rgb(142,36,170)"
@@ -312,49 +267,41 @@ maps:
         lng: -156.5380
     markerColor: 8E24AA
     markers:
-      - title: PÄÊ»ia
+      - title: Pāʻia 🍔🛍
         coords: [20.9033, -156.3697]
         image: paia.jpg
         description: |
-          Laid-back North Shore town often used as the gateway to the Road to HÄna. Good stop for food, shops, and last-minute supplies.
-      - title: PÄÊ»ia Fish Market ðŸ”
-        coords: [20.9154, -156.3813]
-        description: |
-          Busy counter-service restaurant known for fresh fish plates, sandwiches, and generous portions. Order at the counter before finding a seat.
-      - title: Mana Foods ðŸ”ðŸ›
-        coords: [20.9155, -156.3802]
-        description: |
-          Independent grocery store with local produce, prepared foods, natural products, and useful Road to HÄna provisions.
-      - title: Mama's Fish House ðŸ”
-        coords: [20.9295, -156.3671]
-        description: |
-          Celebrated oceanfront restaurant specializing in locally caught fish. It is expensive and reservations often fill months ahead; valet parking is for restaurant guests only.
-      - title: HoÊ»okipa Beach Park
+          Laid-back North Shore town often used as the gateway to the Road to Hāna. Good stop for food, shops, and last-minute supplies.
+      - title: Hoʻokipa Beach Park 🏖
         coords: [20.9344, -156.3583]
         description: |
-          Famous surf and windsurfing beach with an overlook and frequent Hawaiian green sea turtle sightings near the sand. Give turtles at least 10 feet of space, obey volunteers and signs, and treat this primarily as a viewing beach unless conditions match your experience.
-      - title: Baldwin Beach Park
+          Famous surf, windsurfing, and turtle-viewing beach. Best for watching conditions unless you are experienced.
+      - title: Baldwin Beach Park 🏖
         coords: [20.9126, -156.3847]
         description: |
-          Long North Shore beach near PÄÊ»ia. Good for walking, picnics, and beach time when conditions are calm.
-      - title: Maui KuÊ»ia Estate Chocolate ðŸ”
-        coords: [20.8979, -156.5042]
-        description: |
-          Maui chocolate maker offering tastings and tours at its factory and pavilion. Book experiences in advance.
+          Long North Shore beach near Pāʻia. Good for walking, picnics, and beach time when conditions are calm.
       - title: Twin Falls
         coords: [20.9145, -156.2434]
         description: |
-          Popular early Road to HÄna stop on privately managed land, with a farm stand and waterfall walks. Parking can fill, trails may close after heavy rain, and flash floods are possible; follow all posted instructions.
-      - title: WaiheÊ»e Ridge Trail
+          Popular early Road to Hāna stop with waterfall walks and tropical scenery.
+      - title: Waiheʻe Ridge Trail
         coords: [20.9533, -156.5329]
         description: |
           Scenic ridge hike with views over the West Maui Mountains and coastline. Expect mud, clouds, and changing weather.
-      - title: Ê»Äªao Theater
-        coords: [20.8899, -156.5027]
-        description: |
-          Historic theater in Wailuku and home of Maui OnStage. Check the performance calendar if you are looking for an evening activity away from the resorts.
+      - title: Mama’s Fish House 🍔
+        coords: [20.9290, -156.3670]
+        description: Landmark special-occasion restaurant near Pāʻia focused on Hawaiian seafood. It is expensive and reservations often fill months ahead.
+      - title: Pāʻia Fish Market 🍔
+        coords: [20.9157, -156.3815]
+        description: Busy counter-service restaurant serving fish plates, tacos, burgers, and salads in the center of Pāʻia.
+      - title: Flatbread Company 🍔
+        coords: [20.9154, -156.3818]
+        description: Casual wood-fired pizza restaurant with local ingredients and a family-friendly atmosphere.
+      - title: Kuʻau Store 🍔
+        coords: [20.9272, -156.3656]
+        description: Small neighborhood market near Hoʻokipa with poke, prepared food, drinks, and beach-day supplies.
 
-  East Maui / HÄna:
+  East Maui / Hāna:
     polygonColor: "rgb(0,137,123)"
     polygonCoords:
       - lat: 20.9280
@@ -389,67 +336,47 @@ maps:
         lng: -156.2320
     markerColor: 00897B
     markers:
-      - title: Road to HÄna
+      - title: Road to Hāna
         coords: [20.8671, -156.1480]
         image: rth.webp
         description: |
-          Scenic route through small communities, rainforest, waterfalls, curves, and one-lane bridges. Start early, let local traffic pass, park only in legal pullouts, never block the highway or private driveways, and do not trespass for a photo or waterfall. An overnight stay in HÄna makes the trip far less rushed.
-      - title: KeÊ»anae Peninsula
-        coords: [20.8615, -156.1460]
-        description: |
-          Scenic coastal detour with taro fields, a historic church, and dramatic lava shoreline. The water here is dangerous; enjoy the waves from well back on land.
-      - title: Aunt Sandy's Banana Bread ðŸ”
-        coords: [20.8619, -156.1463]
-        description: |
-          Popular roadside stand on the KeÊ»anae Peninsula serving warm banana bread and snacks. Hours can vary and items may sell out.
-      - title: Garden of Eden Arboretum
+          Scenic all-day drive known for curves, one-lane bridges, waterfalls, viewpoints, and small communities. Start early and do not rush.
+      - title: Garden of Eden Arboretum 🛍
         coords: [20.8841, -156.2126]
         description: |
-          Botanical garden and scenic stop along the Road to HÄna.
-      - title: PuaÊ»a KaÊ»a State Wayside
-        coords: [20.8186, -156.1279]
-        description: |
-          Small roadside state park with restrooms, picnic tables, and waterfalls. Use care on wet rocks and never enter streams during or after heavy rain.
-      - title: Kahanu Garden
-        coords: [20.7986, -156.0384]
-        description: |
-          National Tropical Botanical Garden preserving Hawaiian plants and PiÊ»ilanihale Heiau, one of HawaiÊ»i's largest ancient places of worship. Advance reservations are recommended.
-      - title: WaiÊ»Änapanapa State Park
+          Botanical garden and scenic stop along the Road to Hāna.
+      - title: Waiʻānapanapa State Park 🏖
         coords: [20.7850, -156.0032]
         description: |
-          Black-sand cove, sea arches, lava coastline, and coastal trails near HÄna. Advance timed reservations are required for non-HawaiÊ»i residents; do not arrive outside your reserved window.
-      - title: HÄna
+          Black sand beach, sea caves, lava coastline, and coastal trails near Hāna. Advance reservations are usually required for visitors.
+      - title: Hāna
         coords: [20.7557, -155.9880]
         description: |
-          Quiet East Maui town at the end of the HÄna Highway. Consider staying overnight if you want a slower Road to HÄna experience.
-      - title: HÄna Farms ðŸ”
-        coords: [20.7900, -156.0159]
-        description: |
-          Farm and marketplace near HÄna offering baked goods, local products, and wood-fired food. Check current service days and hours.
-      - title: HÄna Cultural Center
-        coords: [20.7593, -155.9881]
-        description: |
-          Small community museum preserving the history and traditions of the HÄna district. Hours can be limited, so confirm before visiting.
-      - title: Koki Beach
-        coords: [20.7278, -155.9873]
-        description: |
-          Striking red-clay and dark-sand beach south of HÄna with views toward Ê»Alau Island. It is better for scenery and food stands than swimming because currents and shorebreak can be hazardous.
-      - title: HÄmoa Beach
+          Quiet East Maui town at the end of the Hāna Highway. Consider staying overnight if you want a slower Road to Hāna experience.
+      - title: Hāmoa Beach 🏖
         coords: [20.7190, -155.9957]
         description: |
-          Scenic East Maui beach near HÄna. Conditions vary, so use caution and follow local signage.
-      - title: Wailua Falls
-        coords: [20.6841, -156.0281]
-        description: |
-          Tall roadside waterfall beyond HÄna with a small parking area. Keep completely off the highway, watch for traffic, and do not climb beyond barriers.
-      - title: KÄ«pahulu / Ê»OheÊ»o Gulch
+          Scenic East Maui beach near Hāna. Conditions vary, so use caution and follow local signage.
+      - title: Kīpahulu / ʻOheʻo Gulch
         coords: [20.6625, -156.0458]
         description: |
-          Remote coastal district of HaleakalÄ National Park near HÄna, with Ê»OheÊ»o Gulch, cultural sites, and the Pipiwai Trail. The pools are often closed to swimming, and the entrance fee is not included with WaiÊ»Änapanapa reservations.
+          Coastal section of Haleakalā National Park near Hāna, with access to ʻOheʻo Gulch and the Pipiwai Trail.
       - title: Pipiwai Trail
         coords: [20.6627, -156.0455]
         description: |
-          Roughly 4-mile round-trip trail through forest and bamboo to a viewpoint below Waimoku Falls. Stay on the trail and out of closed areas; falling rocks and flash floods make approaching waterfalls dangerous.
+          Popular hike through bamboo forest toward Waimoku Falls in the Kīpahulu section of Haleakalā National Park.
+      - title: Keʻanae Peninsula
+        coords: [20.8619, -156.1522]
+        description: Scenic coastal detour with taro fields, an old stone church, and powerful waves breaking over lava rock. The shoreline is for viewing, not swimming.
+      - title: Aunty Sandy’s Banana Bread 🍔
+        coords: [20.8614, -156.1476]
+        description: Popular Keʻanae Peninsula stand serving warm banana bread, smoothies, and simple snacks. Check current hours before relying on it.
+      - title: Hāna Farms 🍔🛍
+        coords: [20.7989, -156.0380]
+        description: Tropical farm and roadside market near Hāna with baked goods, local products, and an on-site restaurant.
+      - title: Hasegawa General Store 🛍
+        coords: [20.7547, -155.9877]
+        description: Historic Hāna store carrying groceries, drinks, basic supplies, and souvenirs. Useful for travelers staying overnight.
 
   Upcountry:
     polygonColor: "rgb(109,76,65)"
@@ -486,67 +413,49 @@ maps:
         lng: -156.4300
     markerColor: 6D4C41
     markers:
-      - title: Makawao
+      - title: Makawao 🍔🛍
         coords: [20.8569, -156.3131]
         description: |
           Upcountry town known for paniolo history, galleries, shops, and a slower inland Maui feel.
-      - title: Komoda Store and Bakery ðŸ”
-        coords: [20.8542, -156.3122]
-        description: |
-          Old-fashioned Makawao bakery famous for stick donuts, cream puffs, and other pastries. Arrive early because popular items sell out, and check its limited opening days.
-      - title: HaliÊ»imaile General Store ðŸ”
-        coords: [20.8719, -156.3437]
-        description: |
-          Long-running Upcountry restaurant serving contemporary HawaiÊ»i regional cuisine in a former plantation store. Reservations are recommended.
-      - title: Hui NoÊ»eau Visual Arts Center
-        coords: [20.8775, -156.3286]
-        description: |
-          Community arts center on the historic Kaluanui Estate with galleries, classes, grounds, and public events.
       - title: Kula
         coords: [20.7909, -156.3269]
         description: |
-          Cooler Upcountry area with farms, gardens, views, and access toward HaleakalÄ.
-      - title: Kula Botanical Garden
-        coords: [20.7331, -156.3199]
-        description: |
-          Family-operated botanical garden with paved and natural paths through protea, orchids, native plants, and other collections.
-      - title: MauiWine
-        coords: [20.6496, -156.3519]
-        description: |
-          Winery on the historic Ê»Ulupalakua Ranch producing pineapple and traditional wines. Check current reservation policies and pair it with an Upcountry drive rather than the Road to HÄna.
-      - title: Ê»Ulupalakua Ranch Store ðŸ”ðŸ›
-        coords: [20.6489, -156.3511]
-        description: |
-          Rural ranch store and grill serving burgers and local products across from MauiWine. Hours are limited.
-      - title: Ê»OÊ»o Farm
+          Cooler Upcountry area with farms, gardens, views, and access toward Haleakalā.
+      - title: ʻOʻo Farm 🍔
         coords: [20.7919, -156.3036]
         description: |
           Upcountry farm experience with tours and lunch. Reserve in advance.
-      - title: AliÊ»i Kula Lavender
+      - title: Aliʻi Kula Lavender 🛍
         coords: [20.7444, -156.3225]
         description: |
-          Lavender farm and garden with cool Upcountry weather and broad island views. Confirm current opening days before making the drive.
-      - title: HaleakalÄ Summit
+          Lavender farm and garden with Upcountry views.
+      - title: Haleakalā Summit 🌋
         coords: [20.7097, -156.2533]
         image: haleakala.jpg
         description: |
-          Summit district of HaleakalÄ National Park, famous for sunrise, sunset, stargazing, and volcanic landscapes. Sunrise entry requires a separate reservation; sunset does not, but parking can fill. The summit is over 10,000 feet, cold, windy, and capable of causing altitude symptoms, so bring warm layers and take it slowly.
-      - title: HaleakalÄ Visitor Center
-        coords: [20.7143, -156.2509]
-        description: |
-          Small visitor center near the summit with ranger information, crater views, and access to major trails. Check current hours and closures with the National Park Service.
+          Summit area of Haleakalā National Park, famous for sunrise, sunset, stargazing, and crater hikes. Sunrise reservations are required.
       - title: Hosmer Grove
         coords: [20.7685, -156.2458]
         description: |
-          Forested area just inside HaleakalÄ National Park with a campground, picnic area, short nature trail, and good native-bird viewing. Temperatures are much cooler than at the coast.
+          Forested area inside Haleakalā National Park with short walks, birding, and cooler temperatures.
+      - title: Komoda Store and Bakery 🍔
+        coords: [20.8562, -156.3135]
+        description: Long-running Makawao bakery known for stick doughnuts, cream puffs, and malasadas. Arrive early; popular items sell out.
+      - title: Kula Bistro 🍔
+        coords: [20.7906, -156.3268]
+        description: Casual Upcountry restaurant with generous portions, seafood, pasta, and house-made desserts. Reservations are helpful at dinner.
+      - title: MauiWine 🍷🛍
+        coords: [20.6493, -156.3973]
+        description: Winery on the historic ʻUlupalakua Ranch property offering tastings, including wines made with Maui-grown pineapple. Check reservation requirements.
+      - title: Ocean Vodka Organic Farm and Distillery 🍔
+        coords: [20.8532, -156.3492]
+        description: Upcountry farm and distillery with tours, tastings, broad island views, and an outdoor café. Reserve ahead for tours.
 ---
 
 # r/VisitingHawaii Maui Guide
 
-Written by [u/soupyhands](https://reddit.com/u/soupyhands) and the r/VisitingHawaii community.
+Written by [u/soupyhands](https://reddit.com/u/soupyhands")
 
-Maui rewards visitors who slow down and explore it by region. This guide groups beaches, cultural sites, food, scenic drives, and other useful stops so you can see what fits together without spending the whole day in the car. Conditions, hours, reservations, and access rules can change, so follow the linked official guidance where provided and verify time-sensitive details before setting out.
+## We hope this guide gives you a practical introduction to Maui and the many different experiences around the island. It is divided into regions so you can group nearby stops and avoid spending your vacation retracing long drives. <span class="screen-only">Click a map section to skip to that part of the guide.</span><span class="print-only">You can also view this guide online at <a href="https://hawaii.webrender.net/maps/maui">https://hawaii.webrender.net/maps/maui</a>.</span>
 
-#### ðŸ” Food & Drink &nbsp; ðŸ› Shopping
-
-Please travel with aloha: use legal parking, respect private property and closures, keep a safe distance from wildlife, choose reef-safe practices, and never turn a recovering neighborhood into a sightseeing stop. Ocean conditions can change quickly; when in doubt, ask a lifeguard or stay out.
+#### 🍔 Food 🛍 Shopping 🏖 Beach ✈️ Airport 🌋 Volcano 🍷 Winery
